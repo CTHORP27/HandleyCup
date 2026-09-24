@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Replace YOUR-DOMAIN-HERE below with your actual domain once hosted
+  (e.g. https://cam-thorpe.github.io/handley-cup), then this is ready to submit
+  to Google Search Console. player.html isn't listed individually since each
+  profile is the same file with a different ?id= — search engines will find
+  them via the links on players.html regardless.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN-HERE/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/players.html</loc><priority>0.9</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/next-event.html</loc><priority>0.9</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/sheet.html</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/events.html</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/groups.html</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/roll-of-honour.html</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/records.html</loc><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/power-rankings.html</loc><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/entry-list.html</loc><priority>0.6</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/nickname-wall.html</loc><priority>0.5</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/draw-predictor.html</loc><priority>0.5</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/head-to-head.html</loc><priority>0.6</priority></url>
+  <url><loc>https://YOUR-DOMAIN-HERE/quizzes.html</loc><priority>0.5</priority></url>
+</urlset>

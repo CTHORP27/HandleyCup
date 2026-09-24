@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Head to Head — The Handley Cup</title>
+<meta name="description" content="Compare two Handley Cup players side by side — stats, best runs, titles, and every match they've ever played against each other.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Handley Cup">
+<meta property="og:title" content="Head to Head — The Handley Cup">
+<meta property="og:description" content="Compare two Handley Cup players side by side — stats, best runs, titles, and every match they've ever played against each other.">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/head-to-head.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#672146">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-logo" href="index.html">The <span>Handley</span> Cup</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="next-event.html">Next Event</a>
+        <a href="players.html">Players</a>
+        <a href="sheet.html">The Sheet</a>
+        <a href="events.html">Events</a>
+        <a href="groups.html">All Time Player Stats</a>
+        <a href="roll-of-honour.html">Roll of Honour</a>
+        <a href="records.html">Records</a>
+        <a href="power-rankings.html">Power Rankings</a>
+        <a href="entry-list.html">Entry List</a>
+        <a href="nickname-wall.html">Nickname Wall</a>
+        <a href="draw-predictor.html">Draw Predictor</a>
+        <a href="head-to-head.html" class="active">Head to Head</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" id="navSearchBtn" type="button" aria-label="Search players">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel">
+          <input type="text" id="navSearchInput" placeholder="Search players…" autocomplete="off">
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="hero-rings" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="210" cy="210" r="200" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#E31C79" stroke-width="1" opacity="0.22"/>
+      <circle cx="210" cy="210" r="100" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="50" fill="none" stroke="#AC145A" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="210" cy="210" r="6" fill="#AC145A" opacity="0.4"/>
+    </svg>
+    <div class="hero-inner" style="display:block;">
+      <div class="eyebrow">Rivalries &amp; Comparisons</div>
+      <h1 class="home-hero-title">Head to Head</h1>
+      <p class="home-hero-sub">Pick two players — see how their careers stack up, stat for stat, and every time they've faced each other.</p>
+    </div>
+  </header>
+
+  <section class="page-section" style="padding-top:28px;">
+    <div class="h2h-picker">
+      <select id="playerA" class="h2h-select"></select>
+      <div class="h2h-vs">vs</div>
+      <select id="playerB" class="h2h-select"></select>
+    </div>
+  </section>
+
+  <section class="page-section" id="h2hResult" style="padding-top:0;"></section>
+
+  <footer class="site-footer">
+    <span>The Handley Cup &amp; Parson's Plate</span>
+    <a href="players.html">← Back to all players</a>
+    <a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      @hallamdarts
+    </a>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="common.js"></script>
+  <script src="power-rankings-data.js"></script>
+  <script src="events-data.js"></script>
+  <script>
+    const realPlayers = [...PLAYERS].filter(p => !p.placeholder).sort((a, b) => a.name.localeCompare(b.name));
+    const selA = document.getElementById('playerA');
+    const selB = document.getElementById('playerB');
+    const resultEl = document.getElementById('h2hResult');
+
+    const optionsHtml = realPlayers.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+    selA.innerHTML = `<option value="">Select a player…</option>` + optionsHtml;
+    selB.innerHTML = `<option value="">Select a player…</option>` + optionsHtml;
+
+    // default to an interesting pairing so the page isn't empty on first load
+    selA.value = 'charlie-marshall';
+    selB.value = 'oliver-burgess';
+
+    function playerById(id) { return PLAYERS.find(p => p.id === id); }
+    function prById(id) { return POWER_RANKINGS.find(r => r.id === id); }
+
+    // Best Run sort order — mirrors The Sheet's tiering, so "better" runs win the row.
+    function bestRunSortValue(bestRun) {
+      if (!bestRun) return -1;
+      const isCup = bestRun.label === 'Handley Cup';
+      const detail = bestRun.detail || '';
+      if (isCup && detail === 'Winner') return 8;
+      if (isCup && detail === 'Runner-Up') return 7;
+      if (!isCup && detail === 'Winner') return 6;
+      if (isCup && detail === 'Semi-Final') return 5;
+      if (!isCup && detail === 'Runner-Up') return 4;
+      if (isCup && detail === 'Quarter-Final') return 3;
+      if (isCup && detail === 'Last 16') return 2;
+      const base = { 'Semi-Final': 5, 'Quarter-Final': 3, 'Last 16': 2, 'Last 32': 1, 'Last 24': 1 }[detail];
+      return base ?? 1;
+    }
+
+    function collectMatches(idA, idB) {
+      const matches = [];
+      Object.keys(EVENTS).sort().forEach(year => {
+        const e = EVENTS[year];
+
+        Object.keys(e.groupFixtures || {}).forEach(group => {
+          (e.groupFixtures[group] || []).forEach(m => {
+            const isPair = (m.player1Id === idA && m.player2Id === idB) || (m.player1Id === idB && m.player2Id === idA);
+            if (!isPair) return;
+            const p1Won = m.score1 > m.score2;
+            matches.push({
+              year, competition: 'Group Stage', round: group,
+              winnerId: p1Won ? m.player1Id : m.player2Id, winnerName: p1Won ? m.player1 : m.player2,
+              loserId: p1Won ? m.player2Id : m.player1Id, loserName: p1Won ? m.player2 : m.player1,
+              winnerLegs: p1Won ? m.score1 : m.score2, loserLegs: p1Won ? m.score2 : m.score1,
+            });
+          });
+        });
+
+        [['cupBracket', 'Handley Cup'], ['plateBracket', "Parson's Plate"]].forEach(([key, label]) => {
+          Object.keys(e[key] || {}).forEach(round => {
+            (e[key][round] || []).forEach(m => {
+              const isPair = (m.player1Id === idA && m.player2Id === idB) || (m.player1Id === idB && m.player2Id === idA);
+              if (!isPair || !m.winnerId) return;
+              matches.push({
+                year, competition: label, round,
+                winnerId: m.winnerId, winnerName: m.winner, loserId: m.loserId, loserName: m.loser,
+                winnerLegs: m.winnerLegs, loserLegs: m.loserLegs,
+              });
+            });
+          });
+        });
+      });
+      return matches;
+    }
+
+    function compTagHtml(competition) {
+      if (competition === 'Handley Cup') return `<span class="comp-tag comp-handley">Cup</span>`;
+      if (competition === "Parson's Plate") return `<span class="comp-tag comp-parsons">Plate</span>`;
+      return `<span class="comp-tag">Group</span>`;
+    }
+
+    function statRow(label, a, b, opts = {}) {
+      const { higherBetter = true, fmt = (v) => (v === null || v === undefined ? '—' : v), unit = '' } = opts;
+      let aWin = false, bWin = false;
+      if (a !== null && a !== undefined && b !== null && b !== undefined && a !== b) {
+        aWin = higherBetter ? a > b : a < b;
+        bWin = higherBetter ? b > a : b < a;
+      }
+      const valA = `${fmt(a)}${a !== null && a !== undefined ? unit : ''}`;
+      const valB = `${fmt(b)}${b !== null && b !== undefined ? unit : ''}`;
+      return `<tr>
+        <td class="cmp-val-cell">${aWin ? `<span class="cmp-win">${valA}</span>` : valA}</td>
+        <td class="cmp-stat-label">${label}</td>
+        <td class="cmp-val-cell">${bWin ? `<span class="cmp-win">${valB}</span>` : valB}</td>
+      </tr>`;
+    }
+
+    function sideHtml(p, pr, isChamp) {
+      return `
+        <div class="cmp-side">
+          <div class="avatar-frame">
+            <div class="avatar small" aria-hidden="true">${avatarHtml(p)}</div>
+            ${isChamp ? `<div class="avatar-crown avatar-crown-small" title="Champion">👑</div>` : ''}
+          </div>
+          <div class="cmp-name">${nameHtml(p.id, p.name)} ${flagHtml(p.nationality)}</div>
+          ${p.nickname ? `<span class="pr-nickname">"${p.nickname}"</span>` : ''}
+          <div class="cmp-rank">${pr.rank ? '#' + pr.rank : '—'}</div>
+          <div class="cmp-rank-label">Power Ranking</div>
+        </div>`;
+    }
+
+    function render() {
+      const idA = selA.value, idB = selB.value;
+      if (!idA || !idB) {
+        resultEl.innerHTML = '';
+        return;
+      }
+      if (idA === idB) {
+        resultEl.innerHTML = `<div class="fact-card pending" style="max-width:600px; margin:0 auto;">Pick two different players.</div>`;
+        return;
+      }
+      const pA = playerById(idA), pB = playerById(idB);
+      const prA = prById(idA) || {}, prB = prById(idB) || {};
+      const isChampA = pA.timeline.some(t => t.result === 'Winner');
+      const isChampB = pB.timeline.some(t => t.result === 'Winner');
+
+      // ---- player header cards ----
+      const headerHtml = `
+        <div class="cmp-header">
+          ${sideHtml(pA, prA, isChampA)}
+          <div class="cmp-divider">vs</div>
+          ${sideHtml(pB, prB, isChampB)}
+        </div>`;
+
+      // ---- stat comparison table ----
+      const bestRunTextA = pA.bestRun ? `${pA.bestRun.label === 'Handley Cup' ? 'Cup' : 'Plate'} — ${pA.bestRun.detail}` : '—';
+      const bestRunTextB = pB.bestRun ? `${pB.bestRun.label === 'Handley Cup' ? 'Cup' : 'Plate'} — ${pB.bestRun.detail}` : '—';
+
+      const rows = [
+        statRow('Power Ranking Score', prA.score ?? null, prB.score ?? null),
+        `<tr>
+          <td class="cmp-val-cell">${bestRunSortValue(pA.bestRun) > bestRunSortValue(pB.bestRun) ? `<span class="cmp-win">${bestRunTextA}</span>` : bestRunTextA}</td>
+          <td class="cmp-stat-label">Best Run</td>
+          <td class="cmp-val-cell">${bestRunSortValue(pB.bestRun) > bestRunSortValue(pA.bestRun) ? `<span class="cmp-win">${bestRunTextB}</span>` : bestRunTextB}</td>
+        </tr>`,
+        statRow('Appearances', pA.appearances ?? null, pB.appearances ?? null),
+        statRow('🏆 Cup Titles', prA.cupTitles ?? 0, prB.cupTitles ?? 0),
+        statRow('🥈 Cup Runner-Ups', prA.cupRunnerUps ?? 0, prB.cupRunnerUps ?? 0),
+        statRow('🏅 Plate Titles', prA.plateTitles ?? 0, prB.plateTitles ?? 0),
+        statRow('Highest Average', pA.highestAverage ? pA.highestAverage.value : null, pB.highestAverage ? pB.highestAverage.value : null, { fmt: v => (v === null || v === undefined ? '—' : v.toFixed(2)) }),
+        statRow('180s', pA.oneEighties ?? null, pB.oneEighties ?? null),
+        statRow('Quickest Leg', pA.quickestLeg ? pA.quickestLeg.darts : null, pB.quickestLeg ? pB.quickestLeg.darts : null, { higherBetter: false, unit: ' darts' }),
+        statRow('Highest Checkout', pA.highestCheckout ? pA.highestCheckout.value : null, pB.highestCheckout ? pB.highestCheckout.value : null),
+      ].join('');
+
+      const tableHtml = `
+        <div class="pr-table-wrap" style="margin-top:32px;">
+          <table class="cmp-table">
+            <thead><tr><th>${pA.name}</th><th></th><th>${pB.name}</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+
+      // ---- head to head: meetings summary + full match-by-match list ----
+      const matches = collectMatches(idA, idB);
+      const winsA = matches.filter(m => m.winnerId === idA).length;
+      const winsB = matches.filter(m => m.winnerId === idB).length;
+
+      let h2hHtml;
+      if (!matches.length) {
+        h2hHtml = `
+          <div class="section-heading" style="margin-top:40px;">Head to Head</div>
+          <div class="fact-card pending" style="max-width:600px; margin:0 auto; text-align:center;">
+            ${pA.name} and ${pB.name} haven't faced each other in any recorded match yet.
+          </div>`;
+      } else {
+        const matchRows = matches.map(m => `
+          <div class="bracket-match" style="margin-bottom:14px;">
+            <div class="bm-row bm-winner">
+              <span class="bm-name">${nameHtml(m.winnerId, m.winnerName)}</span>
+              <span class="bm-score">${m.winnerLegs ?? ''}</span>
+            </div>
+            <div class="bm-row bm-loser">
+              <span class="bm-name">${nameHtml(m.loserId, m.loserName)}</span>
+              <span class="bm-score">${m.loserLegs ?? ''}</span>
+            </div>
+            <div class="source-tag">${m.year} · ${compTagHtml(m.competition)} ${m.round}</div>
+          </div>`).join('');
+
+        h2hHtml = `
+          <div class="section-heading" style="margin-top:40px;">Head to Head</div>
+          <div class="h2h-meetings">
+            <div class="h2h-meetings-label">Meetings</div>
+            <div class="h2h-meetings-value">${matches.length}</div>
+          </div>
+          <div class="h2h-compare">
+            <div class="h2h-compare-side">
+              <div class="h2h-compare-name">${nameHtml(pA.id, pA.name)}</div>
+              <div class="h2h-compare-wins">${winsA}</div>
+            </div>
+            <div class="h2h-compare-divider">vs</div>
+            <div class="h2h-compare-side">
+              <div class="h2h-compare-name">${nameHtml(pB.id, pB.name)}</div>
+              <div class="h2h-compare-wins">${winsB}</div>
+            </div>
+          </div>
+          <div class="section-heading" style="margin-top:32px;">Every Meeting</div>
+          <div class="h2h-match-grid">${matchRows}</div>`;
+      }
+
+      resultEl.innerHTML = headerHtml + tableHtml + h2hHtml;
+    }
+
+    selA.addEventListener('change', render);
+    selB.addEventListener('change', render);
+    render();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entry List — The Handley Cup</title>
+<meta name="description" content="Every Handley Cup entry list, season by season, plus the full all-time entrant archive.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Handley Cup">
+<meta property="og:title" content="Entry List — The Handley Cup">
+<meta property="og:description" content="Every Handley Cup entry list, season by season, plus the full all-time entrant archive.">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/entry-list.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#672146">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-logo" href="index.html">The <span>Handley</span> Cup</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="next-event.html">Next Event</a>
+        <a href="players.html">Players</a>
+        <a href="sheet.html">The Sheet</a>
+        <a href="events.html">Events</a>
+        <a href="groups.html">All Time Player Stats</a>
+        <a href="roll-of-honour.html">Roll of Honour</a>
+        <a href="records.html">Records</a>
+        <a href="power-rankings.html">Power Rankings</a>
+        <a href="entry-list.html" class="active">Entry List</a>
+        <a href="nickname-wall.html">Nickname Wall</a>
+        <a href="draw-predictor.html">Draw Predictor</a>
+        <a href="head-to-head.html">Head to Head</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" id="navSearchBtn" type="button" aria-label="Search players">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel">
+          <input type="text" id="navSearchInput" placeholder="Search players…" autocomplete="off">
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="hero-rings" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="210" cy="210" r="200" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#E31C79" stroke-width="1" opacity="0.22"/>
+      <circle cx="210" cy="210" r="100" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="50" fill="none" stroke="#AC145A" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="210" cy="210" r="6" fill="#AC145A" opacity="0.4"/>
+    </svg>
+    <div class="hero-inner" style="display:block;">
+      <div class="eyebrow">Event History</div>
+      <h1 class="home-hero-title">Entry Lists</h1>
+      <p class="home-hero-sub" id="allTimeSub">Every player who's entered the Handley Cup, season by season.</p>
+    </div>
+  </header>
+
+  <div class="year-tabs" id="yearTabs"></div>
+
+  <section class="page-section" id="yearDetail"></section>
+
+  <footer class="site-footer">
+    <span>The Handley Cup &amp; Parson's Plate</span>
+    <a href="players.html">← Back to all players</a>
+    <a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      @hallamdarts
+    </a>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="common.js"></script>
+  <script src="entry-list-data.js"></script>
+  <script>
+    const tabsEl = document.getElementById('yearTabs');
+    const detailEl = document.getElementById('yearDetail');
+    const allTimeSub = document.getElementById('allTimeSub');
+
+    allTimeSub.textContent = `${ENTRY_LIST.allTimeEntries} total entries across ${ENTRY_LIST.years.length} seasons · ${PLAYERS.filter(p => !p.placeholder).length} unique players`;
+
+    function ordinal(n) {
+      const s = ['th', 'st', 'nd', 'rd'], v = n % 100;
+      return n + (s[(v - 20) % 10] || s[v] || s[0]);
+    }
+
+    tabsEl.innerHTML = `<button class="year-tab" data-year="all">All Time</button>` +
+      ENTRY_LIST.years.map((y, i) =>
+        `<button class="year-tab" data-year="${y.year}">${y.year}</button>`
+      ).join('');
+
+    function renderAllTime() {
+      document.querySelectorAll('.year-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.year === 'all');
+      });
+
+      // group every year's entries by player so each person appears once,
+      // instead of once per season they entered
+      const byPlayer = new Map();
+      ENTRY_LIST.years.forEach(y => {
+        y.entrants.forEach(e => {
+          const key = e.id || e.name;
+          if (!byPlayer.has(key)) {
+            byPlayer.set(key, { id: e.id, name: e.name, years: [] });
+          }
+          byPlayer.get(key).years.push(y.year);
+        });
+      });
+      const uniquePlayers = Array.from(byPlayer.values()).sort((a, b) => a.name.localeCompare(b.name));
+
+      function draw(filterText) {
+        const q = filterText.trim().toLowerCase();
+        const filtered = q ? uniquePlayers.filter(p => p.name.toLowerCase().includes(q)) : uniquePlayers;
+        const grid = document.getElementById('allTimeGrid');
+        const count = document.getElementById('allTimeCount');
+        count.textContent = `${filtered.length} of ${uniquePlayers.length} players`;
+        grid.innerHTML = filtered.map(p => {
+          const span = p.years.length > 1 ? `${p.years[0]}–${p.years[p.years.length - 1]}` : p.years[0];
+          return `
+          <a href="${p.id ? `player.html?id=${encodeURIComponent(p.id)}` : '#'}" class="entrant-card ${p.id ? '' : 'entrant-unlinked'}">
+            <span class="entrant-name">${p.name}</span>
+            <span class="entrant-badge">${p.years.length} appearance${p.years.length === 1 ? '' : 's'} · ${span}</span>
+          </a>`;
+        }).join('') || `<div class="no-results">No entries match that search.</div>`;
+      }
+
+      detailEl.innerHTML = `
+        <div class="year-stat-strip">
+          <div class="stat-block">
+            <div class="stat-label">All-Time Entries</div>
+            <div class="stat-value accent">${ENTRY_LIST.allTimeEntries}</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-label">Unique Players</div>
+            <div class="stat-value" style="font-size:28px;">${PLAYERS.filter(p => !p.placeholder).length}</div>
+          </div>
+        </div>
+        <div class="search-box" style="max-width:480px; margin:32px auto 0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="allTimeSearch" placeholder="Search all entries by name…" autocomplete="off">
+        </div>
+        <div class="section-heading" style="margin-top:24px; max-width:960px; margin-left:auto; margin-right:auto;">
+          <span id="allTimeCount"></span>
+        </div>
+        <div class="entrant-grid" id="allTimeGrid"></div>
+      `;
+
+      draw('');
+      document.getElementById('allTimeSearch').addEventListener('input', (e) => draw(e.target.value));
+    }
+
+    function renderYear(year) {
+      if (year === 'all') { renderAllTime(); return; }
+      const y = ENTRY_LIST.years.find(x => x.year === year);
+      if (!y) return;
+
+      document.querySelectorAll('.year-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.year === year);
+      });
+
+      const commentsHtml = y.comments.length
+        ? `<div class="year-comments">${y.comments.map(c => `<span class="year-comment-chip">${c}</span>`).join('')}</div>`
+        : '';
+
+      const entrantsHtml = y.entrants.map(e => `
+        <a href="${e.id ? `player.html?id=${encodeURIComponent(e.id)}` : '#'}" class="entrant-card ${e.id ? '' : 'entrant-unlinked'}">
+          <span class="entrant-name">${e.name}</span>
+          <span class="entrant-badge">${ordinal(e.appearanceNumber)} appearance${e.appearanceNumber === 1 ? ' — debut' : ''}</span>
+        </a>`).join('');
+
+      detailEl.innerHTML = `
+        <div class="year-stat-strip">
+          <div class="stat-block">
+            <div class="stat-label">Entries</div>
+            <div class="stat-value accent">${y.entries}</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-label">Format</div>
+            <div class="stat-value" style="font-size:20px;">${y.format}</div>
+          </div>
+        </div>
+        ${commentsHtml}
+        <div class="section-heading" style="margin-top:32px;">Entrants — ${y.year}</div>
+        <div class="entrant-grid">${entrantsHtml}</div>
+      `;
+    }
+
+    tabsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.year-tab');
+      if (btn) renderYear(btn.dataset.year);
+    });
+
+    // default to the All Time overview, like the player search page
+    renderYear('all');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "The Handley Cup",
+  "short_name": "Handley Cup",
+  "description": "Stats, records and history for the Handley Cup & Parson's Plate — Sheffield Hallam Darts.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#672146",
+  "theme_color": "#672146",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
