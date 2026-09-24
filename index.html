@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Handley Cup</title>
+<meta name="description" content="The Handley Cup & Parson's Plate — Sheffield Hallam Darts' annual championship. Player stats, records, brackets and roll of honour, every season since 18/19.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Handley Cup">
+<meta property="og:title" content="The Handley Cup">
+<meta property="og:description" content="The Handley Cup & Parson's Plate — Sheffield Hallam Darts' annual championship. Player stats, records, brackets and roll of honour, every season since 18/19.">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/index.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#672146">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-logo" href="index.html">The <span>Handley</span> Cup</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="next-event.html">Next Event</a>
+        <a href="players.html">Players</a>
+        <a href="sheet.html">The Sheet</a>
+        <a href="events.html">Events</a>
+        <a href="groups.html">All Time Player Stats</a>
+        <a href="roll-of-honour.html">Roll of Honour</a>
+        <a href="records.html">Records</a>
+        <a href="power-rankings.html">Power Rankings</a>
+        <a href="entry-list.html">Entry List</a>
+        <a href="nickname-wall.html">Nickname Wall</a>
+        <a href="draw-predictor.html">Draw Predictor</a>
+        <a href="head-to-head.html">Head to Head</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" id="navSearchBtn" type="button" aria-label="Search players">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel">
+          <input type="text" id="navSearchInput" placeholder="Search players…" autocomplete="off">
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero home-splash">
+    <svg class="hero-rings" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="210" cy="210" r="200" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#E31C79" stroke-width="1" opacity="0.22"/>
+      <circle cx="210" cy="210" r="100" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="50" fill="none" stroke="#AC145A" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="210" cy="210" r="6" fill="#AC145A" opacity="0.4"/>
+    </svg>
+    <div class="hero-inner" style="display:block; text-align:center; max-width:720px; margin:0 auto;">
+      <div class="eyebrow" style="justify-content:center;">Sheffield Hallam Darts</div>
+      <h1 class="home-hero-title" style="font-size:clamp(44px, 8vw, 76px);">The Handley Cup</h1>
+      <p class="home-hero-sub" style="max-width:600px; margin-left:auto; margin-right:auto;">
+        &amp; The Parson's Plate — the annual championship and consolation events, run every season since 18/19.
+      </p>
+    </div>
+  </header>
+  <div class="icon-legend">
+    <span>🏆 Handley Cup</span>
+    <span>🥈 Runner-Up</span>
+    <span>🏅 Parson's Plate</span>
+  </div>
+
+
+  <!-- Quick stats -->
+  <section class="page-section" style="padding-top:32px; padding-bottom:0;">
+    <div class="home-stats-strip" id="homeStats"></div>
+  </section>
+
+  <!-- Reigning champions -->
+  <section class="page-section">
+    <div class="section-heading collapsible" data-collapse-target="reigningBoard">Reigning Champions — <span id="latestYearLabel"></span><span class="collapse-arrow">▾</span></div>
+    <div class="reigning-board" id="reigningBoard"></div>
+  </section>
+
+  <!-- Nav cards -->
+  <section class="page-section">
+    <div class="section-heading collapsible" data-collapse-target="homeNavGrid">Explore the Handley Cup<span class="collapse-arrow">▾</span></div>
+    <div class="home-nav-grid fixed-5col" id="homeNavGrid">
+      <a class="home-nav-card" href="players.html">
+        <div class="home-nav-icon">👤</div>
+        <div class="home-nav-title">Player Profiles</div>
+        <div class="home-nav-desc">Search every player who's ever entered, and dig into their career record.</div>
+      </a>
+      <a class="home-nav-card" href="head-to-head.html">
+        <div class="home-nav-icon">⚔️</div>
+        <div class="home-nav-title">Head to Head</div>
+        <div class="home-nav-desc">Compare two players stat for stat, and see every time they've faced each other.</div>
+      </a>
+      <a class="home-nav-card" href="roll-of-honour.html">
+        <div class="home-nav-icon">🏆</div>
+        <div class="home-nav-title">Roll of Honour</div>
+        <div class="home-nav-desc">Every champion, runner-up and finalist since the Cup began.</div>
+      </a>
+      <a class="home-nav-card" href="power-rankings.html">
+        <div class="home-nav-icon">📊</div>
+        <div class="home-nav-title">Power Rankings</div>
+        <div class="home-nav-desc">All-time career rankings based on how far players have gone each season.</div>
+      </a>
+      <a class="home-nav-card" href="sheet.html">
+        <div class="home-nav-icon">📋</div>
+        <div class="home-nav-title">The Sheet</div>
+        <div class="home-nav-desc">Every player, every stat, one sortable table.</div>
+      </a>
+      <a class="home-nav-card" href="events.html">
+        <div class="home-nav-icon">🎯</div>
+        <div class="home-nav-title">Events</div>
+        <div class="home-nav-desc">Group stages and knockout brackets — 18/19 through 21/22 so far, more added as they arrive.</div>
+      </a>
+      <a class="home-nav-card" href="groups.html">
+        <div class="home-nav-icon">🧮</div>
+        <div class="home-nav-title">All Time Player Stats</div>
+        <div class="home-nav-desc">Every group, every season, plus the all-time group-stage and knockout leaderboard.</div>
+      </a>
+      <a class="home-nav-card" href="entry-list.html">
+        <div class="home-nav-icon">📋</div>
+        <div class="home-nav-title">Entry Lists</div>
+        <div class="home-nav-desc">Browse who entered each season, or search all 191 entries at once.</div>
+      </a>
+      <a class="home-nav-card" href="nickname-wall.html">
+        <div class="home-nav-icon">🏷️</div>
+        <div class="home-nav-title">Nickname Wall</div>
+        <div class="home-nav-desc">What everyone's actually called, all in one place.</div>
+      </a>
+      <a class="home-nav-card" href="draw-predictor.html">
+        <div class="home-nav-icon">🎲</div>
+        <div class="home-nav-title">Draw Predictor</div>
+        <div class="home-nav-desc">Draw a random field and simulate the knockouts, weighted by Power Rankings.</div>
+      </a>
+      <a class="home-nav-card" href="quizzes.html">
+        <div class="home-nav-icon">🧠</div>
+        <div class="home-nav-title">Quizzes</div>
+        <div class="home-nav-desc">Test your Handley Cup knowledge with quizzes on the tournament's history and characters.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- About the event — placeholder -->
+  <section class="page-section">
+    <div class="section-heading collapsible" data-collapse-target="aboutEventContent">About the Event<span class="collapse-arrow">▾</span></div>
+    <div id="aboutEventContent">
+    <div class="fact-card" style="font-size:15px; line-height:1.7;">
+      The Handley Cup is one of the biggest days in the Hallam Darts calendar — the annual in-house championship
+      where everyone from Hallam Darts, past, present and honorary, comes together for one day a year to drink,
+      chat, play darts, and then watch Charlie Marshall win it.
+      <br><br>
+      Nine years ago the idea was spawned from Curtis Thorpe wanting Hallam Darts to have something to look
+      forward to other than the Varsity hammering from our Steel City rivals — something for every Hallam player
+      to play in and enjoy, and something to come back to after graduating, to see everyone that makes Hallam
+      Darts what it is. It's only getting bigger and better, with the society going from strength to strength and
+      the alumni coming back to remind everyone they stand on the shoulders of giants.
+    </div>
+    </div>
+  </section>
+
+  <!-- Next event -->
+  <section class="page-section">
+    <div class="section-heading collapsible" data-collapse-target="nextEventContent">Next Event<span class="collapse-arrow">▾</span></div>
+    <div id="nextEventContent">
+    <div class="next-event-card">
+      <div class="next-event-header">
+        <div class="next-event-title">Handley Cup 2026/27</div>
+        <div class="next-event-date">30 Jan 2027 &middot; Doors 12:30</div>
+      </div>
+      <div class="next-event-grid">
+        <div class="next-event-row">
+          <span class="next-event-icon">🏠</span>
+          <span class="next-event-label">Venue</span>
+          <span class="next-event-value">Yorkshire Main, DN12 1DA</span>
+        </div>
+        <div class="next-event-row">
+          <span class="next-event-icon">💷</span>
+          <span class="next-event-label">Entry</span>
+          <span class="next-event-value">£3 — trophies, high checkout raffle and bonus games</span>
+        </div>
+        <div class="next-event-row">
+          <span class="next-event-icon">🎯</span>
+          <span class="next-event-label">Format</span>
+          <span class="next-event-value">Depends on the draw — round robin, then split into the Handley Cup and Parson's Plate. Managed via DartConnect.</span>
+        </div>
+        <div class="next-event-row">
+          <span class="next-event-icon">👥</span>
+          <span class="next-event-label">Who can enter</span>
+          <span class="next-event-value">Anyone who's ever played for Hallam Darts in any capacity — socials included.</span>
+        </div>
+        <div class="next-event-row">
+          <span class="next-event-icon">✉️</span>
+          <span class="next-event-label">To enter</span>
+          <span class="next-event-value">DM Hallam Darts, Callum Woodcock or Curtis Thorpe to be added to the draw.</span>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:20px;">
+        <a href="next-event.html">Full details &amp; countdown →</a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>The Handley Cup &amp; Parson's Plate</span>
+    <a href="players.html">Browse all players →</a>
+    <a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      @hallamdarts
+    </a>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="common.js"></script>
+  <script src="roll-of-honour-data.js"></script>
+  <script src="entry-list-data.js"></script>
+  <script>
+    const latest = ROLL_OF_HONOUR[ROLL_OF_HONOUR.length - 1];
+    document.getElementById('latestYearLabel').textContent = latest.year;
+
+    function nameHtml(entry) {
+      if (!entry || !entry.name) return '<span class="steel-dim">—</span>';
+      return entry.id && PLAYERS.some(p => p.id === entry.id)
+        ? `<a href="player.html?id=${encodeURIComponent(entry.id)}">${entry.name}</a>`
+        : entry.name;
+    }
+
+    function championCardHtml(entry, label, nameClass) {
+      const player = entry && entry.id ? PLAYERS.find(p => p.id === entry.id) : null;
+      const photoHtml = player
+        ? `<div class="avatar-frame">
+             <div class="avatar small" aria-hidden="true">${avatarHtml(player)}</div>
+             <div class="avatar-crown avatar-crown-small" title="Champion">👑</div>
+           </div>`
+        : '';
+      return `<div class="reigning-photo-row">${photoHtml}<div>
+          <div class="roh-label">${label}</div>
+          <div class="${nameClass}">${nameHtml(entry)} ${player ? flagHtml(player.nationality) : ''}</div>
+        </div></div>`;
+    }
+
+    document.getElementById('reigningBoard').innerHTML = `
+      <div class="reigning-card">
+        ${championCardHtml(latest.winner, '🏆 Handley Cup', 'roh-champion-name')}
+        <div class="roh-sub">beat ${nameHtml(latest.runnerUp)}, ${latest.finalScore || ''}${latest.finalScoreReconstructed ? '*' : ''}</div>
+      </div>
+      <div class="reigning-card">
+        ${latest.plateWinner
+          ? championCardHtml(latest.plateWinner, "🏅 Parson's Plate", 'roh-plate-name') + `<div class="roh-sub">${latest.plateScore ? `Final score ${latest.plateScore}${latest.plateScoreReconstructed ? '*' : ''}` : ''}</div>`
+          : `<div class="roh-label">🏅 Parson's Plate</div><div class="roh-plate-name">—</div>`}
+      </div>
+    `;
+
+    const realPlayers = PLAYERS.filter(p => !p.placeholder).length;
+    document.getElementById('homeStats').innerHTML = `
+      <div class="home-stat"><div class="home-stat-value">${ENTRY_LIST.allTimeEntries}</div><div class="home-stat-label">All-Time Entries</div></div>
+      <div class="home-stat"><div class="home-stat-value">${realPlayers}</div><div class="home-stat-label">Unique Players</div></div>
+      <div class="home-stat"><div class="home-stat-value">${ENTRY_LIST.years.length}</div><div class="home-stat-label">Years Played</div></div>
+      <div class="home-stat"><div class="home-stat-value">${ENTRY_LIST.years[ENTRY_LIST.years.length-1].entries}</div><div class="home-stat-label">Entries Last Year</div></div>
+    `;
+  </script>
+
+</body>
+</html>

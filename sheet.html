@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sheet — The Handley Cup</title>
+<meta name="description" content="Every Handley Cup player, every stat, in one sortable table — 180s, checkouts, quickest legs and highest averages.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Handley Cup">
+<meta property="og:title" content="The Sheet — The Handley Cup">
+<meta property="og:description" content="Every Handley Cup player, every stat, in one sortable table — 180s, checkouts, quickest legs and highest averages.">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/sheet.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#672146">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-logo" href="index.html">The <span>Handley</span> Cup</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="next-event.html">Next Event</a>
+        <a href="players.html">Players</a>
+        <a href="sheet.html" class="active">The Sheet</a>
+        <a href="events.html">Events</a>
+        <a href="groups.html">All Time Player Stats</a>
+        <a href="roll-of-honour.html">Roll of Honour</a>
+        <a href="records.html">Records</a>
+        <a href="power-rankings.html">Power Rankings</a>
+        <a href="entry-list.html">Entry List</a>
+        <a href="nickname-wall.html">Nickname Wall</a>
+        <a href="draw-predictor.html">Draw Predictor</a>
+        <a href="head-to-head.html">Head to Head</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" id="navSearchBtn" type="button" aria-label="Search players">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel">
+          <input type="text" id="navSearchInput" placeholder="Search players…" autocomplete="off">
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="hero-rings" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="210" cy="210" r="200" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#E31C79" stroke-width="1" opacity="0.22"/>
+      <circle cx="210" cy="210" r="100" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="50" fill="none" stroke="#AC145A" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="210" cy="210" r="6" fill="#AC145A" opacity="0.4"/>
+    </svg>
+    <div class="hero-inner" style="display:block;">
+      <div class="eyebrow">Raw Data</div>
+      <h1 class="home-hero-title">The Sheet</h1>
+      <p class="home-hero-sub">Every player, every stat, one table. Click a column to sort it.</p>
+      <div class="search-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="sheetSearch" placeholder="Filter by name…" autocomplete="off">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="icon-legend">
+    <span>🏆 Handley Cup</span>
+    <span>🥈 Runner-Up</span>
+    <span>🏅 Parson's Plate</span>
+  </div>
+
+
+  <section class="page-section" style="padding-top:24px;">
+    <div class="pr-table-wrap">
+      <table class="pr-table sheet-table" id="sheetTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-key="name" data-type="string">Player <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="appearances" data-type="number" style="text-align:center;">Apps <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="oneEighties" data-type="number" style="text-align:center;">180s <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="quickestLeg" data-type="number" style="text-align:center;">Quickest Leg <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="highestCheckout" data-type="number" style="text-align:center;">High Checkout <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="bestRunSort" data-type="number">Best Run <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="average" data-type="number" style="text-align:right;">Highest Avg <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="sheetBody"></tbody>
+      </table>
+    </div>
+    <div class="no-results" id="sheetNoResults" style="display:none;">No players match that search.</div>
+  </section>
+
+  <footer class="site-footer">
+    <span>The Handley Cup &amp; Parson's Plate</span>
+    <span id="sheetCount"></span>
+    <a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      @hallamdarts
+    </a>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="common.js"></script>
+  <script src="power-rankings-data.js"></script>
+  <script>
+
+    // Best Run sort order — mirrors the site's Best Run tiering:
+    // Cup Winner > Cup RU > Plate Winner > Cup SF > Plate RU > Cup QF > Cup L16
+    // > everything else (ties with its Cup-round equivalent).
+    function bestRunSortValue(bestRun) {
+      if (!bestRun) return -1;
+      const isCup = bestRun.label === 'Handley Cup';
+      const detail = bestRun.detail || '';
+      if (isCup && detail === 'Winner') return 8;
+      if (isCup && detail === 'Runner-Up') return 7;
+      if (!isCup && detail === 'Winner') return 6;
+      if (isCup && detail === 'Semi-Final') return 5;
+      if (!isCup && detail === 'Runner-Up') return 4;
+      if (isCup && detail === 'Quarter-Final') return 3;
+      if (isCup && detail === 'Last 16') return 2;
+      const base = { 'Semi-Final': 5, 'Quarter-Final': 3, 'Last 16': 2, 'Last 32': 1, 'Last 24': 1 }[detail];
+      return base ?? 1;
+    }
+
+    const avgById = {};
+    const statsById = {};
+    const natById = {};
+    PLAYERS.forEach(p => {
+      avgById[p.id] = p.highestAverage ? p.highestAverage.value : null;
+      natById[p.id] = p.nationality;
+      // Pending stats — not collected yet. Add `oneEighties` (number),
+      // `quickestLeg` ({ darts, link }) and `highestCheckout` ({ value, link })
+      // to a player's object in players-data.js and these will populate
+      // automatically, same pattern as highestAverage.
+      statsById[p.id] = {
+        oneEighties: p.oneEighties ?? null,
+        quickestLeg: p.quickestLeg ? p.quickestLeg.darts : null,
+        highestCheckout: p.highestCheckout ? p.highestCheckout.value : null,
+      };
+    });
+
+    const rows = POWER_RANKINGS.map(r => ({
+      id: r.id,
+      name: r.name,
+      nickname: r.nickname,
+      nationality: natById[r.id],
+      appearances: r.appearances,
+      oneEighties: statsById[r.id].oneEighties,
+      quickestLeg: statsById[r.id].quickestLeg,
+      highestCheckout: statsById[r.id].highestCheckout,
+      bestRun: r.bestRun,
+      bestRunSort: bestRunSortValue(r.bestRun),
+      average: avgById[r.id],
+    }));
+
+    let sortKey = 'name';
+    let sortType = 'string';
+    let sortDir = 1;
+
+    const body = document.getElementById('sheetBody');
+    const countEl = document.getElementById('sheetCount');
+    const noResults = document.getElementById('sheetNoResults');
+    const table = document.getElementById('sheetTable');
+
+    function draw() {
+      const q = document.getElementById('sheetSearch').value.trim().toLowerCase();
+      let filtered = q ? rows.filter(r => r.name.toLowerCase().includes(q)) : rows.slice();
+
+      filtered.sort((a, b) => {
+        let av = a[sortKey], bv = b[sortKey];
+        if (sortType === 'string') {
+          av = (av || '').toLowerCase(); bv = (bv || '').toLowerCase();
+          if (av < bv) return -1 * sortDir;
+          if (av > bv) return 1 * sortDir;
+          return a.name.localeCompare(b.name);
+        }
+        // numbers — nulls sort last regardless of direction
+        if (av === null || av === undefined) return 1;
+        if (bv === null || bv === undefined) return -1;
+        return (av - bv) * sortDir;
+      });
+
+      table.style.display = filtered.length ? '' : 'none';
+      noResults.style.display = filtered.length ? 'none' : '';
+      countEl.textContent = `${filtered.length} of ${rows.length} players`;
+
+      body.innerHTML = filtered.map(r => {
+        const linked = PLAYERS.some(p => p.id === r.id);
+        const nameCell = linked ? `<a href="player.html?id=${encodeURIComponent(r.id)}">${r.name}</a>` : r.name;
+        const nickname = r.nickname ? `<span class="pr-nickname">"${r.nickname}"</span>` : '';
+        const bestRunText = r.bestRun ? `${r.bestRun.label === 'Handley Cup' ? 'Cup' : 'Plate'} — ${r.bestRun.detail}` : '—';
+        const avgText = r.average !== null && r.average !== undefined ? r.average.toFixed(2) : '—';
+        return `
+          <tr>
+            <td class="pr-name">${nameCell} ${flagHtml(r.nationality)} ${nickname}</td>
+            <td style="text-align:center;">${r.appearances}</td>
+            <td style="text-align:center; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.oneEighties !== null ? r.oneEighties : '—'}</td>
+            <td style="text-align:center; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.quickestLeg !== null ? r.quickestLeg : '—'}</td>
+            <td style="text-align:center; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.highestCheckout !== null ? r.highestCheckout : '—'}</td>
+            <td class="pr-bestrun">${bestRunText}</td>
+            <td style="text-align:right; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${avgText}</td>
+          </tr>`;
+      }).join('');
+    }
+
+    table.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.key;
+        if (sortKey === key) {
+          sortDir *= -1;
+        } else {
+          sortKey = key;
+          sortType = th.dataset.type;
+          sortDir = sortType === 'string' ? 1 : -1; // numbers default to highest-first
+        }
+        table.querySelectorAll('.sort-arrow').forEach(a => a.textContent = '');
+        th.querySelector('.sort-arrow').textContent = sortDir === 1 ? '▲' : '▼';
+        draw();
+      });
+    });
+
+    document.getElementById('sheetSearch').addEventListener('input', draw);
+
+    // default: alphabetical by name
+    sortKey = 'name'; sortType = 'string'; sortDir = 1;
+    table.querySelector('[data-key="name"] .sort-arrow').textContent = '▲';
+    draw();
+  </script>
+
+</body>
+</html>

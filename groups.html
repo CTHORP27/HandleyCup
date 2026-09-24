@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Time Player Stats — The Handley Cup</title>
+<meta name="description" content="Every Handley Cup group stage, every season, plus an all-time group-stage and knockout leaderboard.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Handley Cup">
+<meta property="og:title" content="All Time Player Stats — The Handley Cup">
+<meta property="og:description" content="Every Handley Cup group stage, every season, plus an all-time group-stage and knockout leaderboard.">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/groups.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#672146">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-logo" href="index.html">The <span>Handley</span> Cup</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="next-event.html">Next Event</a>
+        <a href="players.html">Players</a>
+        <a href="sheet.html">The Sheet</a>
+        <a href="events.html">Events</a>
+        <a href="groups.html" class="active">All Time Player Stats</a>
+        <a href="roll-of-honour.html">Roll of Honour</a>
+        <a href="records.html">Records</a>
+        <a href="power-rankings.html">Power Rankings</a>
+        <a href="entry-list.html">Entry List</a>
+        <a href="nickname-wall.html">Nickname Wall</a>
+        <a href="draw-predictor.html">Draw Predictor</a>
+        <a href="head-to-head.html">Head to Head</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" id="navSearchBtn" type="button" aria-label="Search players">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel">
+          <input type="text" id="navSearchInput" placeholder="Search players…" autocomplete="off">
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="hero-rings" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="210" cy="210" r="200" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#E31C79" stroke-width="1" opacity="0.22"/>
+      <circle cx="210" cy="210" r="100" fill="none" stroke="#FBF4F6" stroke-width="1" opacity="0.12"/>
+      <circle cx="210" cy="210" r="50" fill="none" stroke="#AC145A" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="210" cy="210" r="6" fill="#AC145A" opacity="0.4"/>
+    </svg>
+    <div class="hero-inner" style="display:block;">
+      <div class="eyebrow">Before The Knockouts</div>
+      <h1 class="home-hero-title">All Time Player Stats</h1>
+      <p class="home-hero-sub">Every group, every season — plus the all-time leaderboard for the stage where it all starts.</p>
+    </div>
+  </header>
+
+  <section class="page-section" style="padding-top:28px;">
+    <div class="section-heading">All-Time Leaderboard</div>
+    <div class="year-tabs" id="leaderboardModeTabs" style="margin-bottom:18px;">
+      <button class="year-tab" data-mode="group">Group Stage</button>
+      <button class="year-tab" data-mode="knockout">Knockouts</button>
+      <button class="year-tab active" data-mode="all">Combined</button>
+    </div>
+    <div class="search-box" style="max-width:420px; margin:0 auto 20px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="groupSearch" placeholder="Filter by name…" autocomplete="off">
+    </div>
+    <div class="pr-table-wrap">
+      <table class="pr-table sheet-table" id="groupTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-key="name" data-type="string">Player <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="played" data-type="number" style="text-align:center;">Played <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="wins" data-type="number" style="text-align:center;">Won <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="winPct" data-type="number" style="text-align:center;">Win % <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="legDiff" data-type="number" style="text-align:center;">Leg Diff <span class="sort-arrow"></span></th>
+            <th class="sortable" data-key="legsFor" data-type="number" style="text-align:right;">Legs For <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="groupBody"></tbody>
+      </table>
+    </div>
+    <div class="no-results" id="groupNoResults" style="display:none;">No players match that search.</div>
+    <div class="fact-card pending" style="max-width:720px; margin:20px auto 0; font-size:13px;" id="leaderboardNote">
+      Group stage and knockouts combined — every recorded Handley Cup and Parson's Plate match, in one table.
+    </div>
+  </section>
+
+  <section class="page-section" id="yearGroupsSection">
+    <div class="section-heading">Season by Season</div>
+    <div class="year-tabs" id="yearTabs"></div>
+    <div class="page-section" id="yearDetail" style="padding-top:20px;"></div>
+  </section>
+
+  <footer class="site-footer">
+    <span>The Handley Cup &amp; Parson's Plate</span>
+    <span id="groupCount"></span>
+    <a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      @hallamdarts
+    </a>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="common.js"></script>
+  <script src="events-data.js"></script>
+  <script>
+    // ---- Aggregate every match, every year, into three leaderboards: group-stage
+    // only, knockouts only (Cup + Plate), and combined ----
+    function addResult(record, id, name, legsFor, legsAgainst) {
+      if (!name) return;
+      const key = id || name;
+      if (!record[key]) record[key] = { id, name, played: 0, wins: 0, legsFor: 0, legsAgainst: 0 };
+      record[key].played++;
+      record[key].legsFor += legsFor;
+      record[key].legsAgainst += legsAgainst;
+      if (legsFor > legsAgainst) record[key].wins++;
+    }
+
+    const groupRecord = {}, knockoutRecord = {}, allRecord = {};
+    Object.values(EVENTS).forEach(e => {
+      Object.values(e.groupFixtures || {}).forEach(matches => {
+        (matches || []).forEach(m => {
+          if (m.score1 === null || m.score1 === undefined || m.score2 === null || m.score2 === undefined) return;
+          [[m.player1Id, m.player1, m.score1, m.score2], [m.player2Id, m.player2, m.score2, m.score1]]
+            .forEach(([id, name, lf, la]) => { addResult(groupRecord, id, name, lf, la); addResult(allRecord, id, name, lf, la); });
+        });
+      });
+      [e.cupBracket, e.plateBracket].forEach(bracket => {
+        Object.values(bracket || {}).forEach(matches => {
+          (matches || []).forEach(m => {
+            if (!m.winnerId && !m.winner) return;
+            if (m.winnerLegs === null || m.winnerLegs === undefined || m.loserLegs === null || m.loserLegs === undefined) return;
+            [[m.winnerId, m.winner, m.winnerLegs, m.loserLegs], [m.loserId, m.loser, m.loserLegs, m.winnerLegs]]
+              .forEach(([id, name, lf, la]) => { addResult(knockoutRecord, id, name, lf, la); addResult(allRecord, id, name, lf, la); });
+          });
+        });
+      });
+    });
+
+    function toRows(record) {
+      return Object.values(record).map(r => ({
+        ...r,
+        winPct: r.played ? (r.wins / r.played) * 100 : 0,
+        legDiff: r.legsFor - r.legsAgainst,
+      }));
+    }
+
+    const DATASETS = {
+      group: { rows: toRows(groupRecord), note: `Every recorded group-stage match, every season, rolled into one table. Sort any column — win % rewards consistency, but keep an eye on Played too, since a small sample can flatter a single good group.` },
+      knockout: { rows: toRows(knockoutRecord), note: `Cup and Plate knockout matches only, every season. Smaller sample sizes than the group stage, so a single deep run can swing win % a long way.` },
+      all: { rows: toRows(allRecord), note: `Group stage and knockouts combined — every recorded Handley Cup and Parson's Plate match, in one table.` },
+    };
+    let mode = 'all';
+    let rows = DATASETS[mode].rows;
+
+    let sortKey = 'winPct', sortType = 'number', sortDir = -1;
+    const body = document.getElementById('groupBody');
+    const countEl = document.getElementById('groupCount');
+    const noResults = document.getElementById('groupNoResults');
+    const table = document.getElementById('groupTable');
+    const noteEl = document.getElementById('leaderboardNote');
+
+    document.getElementById('leaderboardModeTabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('.year-tab');
+      if (!btn) return;
+      document.querySelectorAll('#leaderboardModeTabs .year-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      mode = btn.dataset.mode;
+      rows = DATASETS[mode].rows;
+      noteEl.textContent = DATASETS[mode].note;
+      drawTable();
+    });
+
+    function drawTable() {
+      const q = document.getElementById('groupSearch').value.trim().toLowerCase();
+      let filtered = q ? rows.filter(r => r.name.toLowerCase().includes(q)) : rows.slice();
+
+      filtered.sort((a, b) => {
+        let av = a[sortKey], bv = b[sortKey];
+        if (sortType === 'string') {
+          av = (av || '').toLowerCase(); bv = (bv || '').toLowerCase();
+          if (av < bv) return -1 * sortDir;
+          if (av > bv) return 1 * sortDir;
+          return a.name.localeCompare(b.name);
+        }
+        return (av - bv) * sortDir;
+      });
+
+      table.style.display = filtered.length ? '' : 'none';
+      noResults.style.display = filtered.length ? 'none' : '';
+      countEl.textContent = `${filtered.length} of ${rows.length} players`;
+
+      body.innerHTML = filtered.map(r => `
+        <tr>
+          <td class="pr-name">${nameHtml(r.id, r.name)}</td>
+          <td style="text-align:center;">${r.played}</td>
+          <td style="text-align:center;">${r.wins}</td>
+          <td style="text-align:center; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.winPct.toFixed(1)}%</td>
+          <td style="text-align:center; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.legDiff > 0 ? '+' : ''}${r.legDiff}</td>
+          <td style="text-align:right; font-family:'IBM Plex Mono', monospace; color:var(--steel-dim);">${r.legsFor}</td>
+        </tr>`).join('');
+    }
+
+    table.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.key;
+        if (sortKey === key) {
+          sortDir *= -1;
+        } else {
+          sortKey = key;
+          sortType = th.dataset.type;
+          sortDir = sortType === 'string' ? 1 : -1;
+        }
+        table.querySelectorAll('.sort-arrow').forEach(a => a.textContent = '');
+        th.querySelector('.sort-arrow').textContent = sortDir === 1 ? '▲' : '▼';
+        drawTable();
+      });
+    });
+    document.getElementById('groupSearch').addEventListener('input', drawTable);
+    table.querySelector('[data-key="winPct"] .sort-arrow').textContent = '▼';
+    drawTable();
+
+    // ---- Season by season group standings (reuses each year's own computed groups) ----
+    const YEARS = Object.keys(EVENTS);
+    const tabsEl = document.getElementById('yearTabs');
+    const detailEl = document.getElementById('yearDetail');
+    tabsEl.innerHTML = YEARS.map(y => `<button class="year-tab" data-year="${y}">${y}</button>`).join('');
+
+    function groupsHtml(groups) {
+      const names = Object.keys(groups || {});
+      if (!names.length) return `<div class="fact-card pending" style="max-width:600px; margin:0 auto;">No group data recorded for this year.</div>`;
+      const cols = names.map(g => {
+        const rowsHtml = groups[g].map((s, i) => `
+          <div class="group-row">
+            <span class="group-pos">${i + 1}</span>
+            <span class="group-name">${nameHtml(s.id, s.name)}</span>
+            <span class="group-meta">${s.points ?? '—'} pts</span>
+          </div>`).join('');
+        return `<div class="group-col"><div class="group-col-title">${g}</div>${rowsHtml}</div>`;
+      }).join('');
+      return `<div class="groups-board">${cols}</div>`;
+    }
+
+    function renderYear(year) {
+      document.querySelectorAll('.year-tab').forEach(btn => btn.classList.toggle('active', btn.dataset.year === year));
+      const e = EVENTS[year];
+      detailEl.innerHTML = groupsHtml(e.groups);
+    }
+
+    tabsEl.addEventListener('click', e => {
+      const btn = e.target.closest('.year-tab');
+      if (btn) renderYear(btn.dataset.year);
+    });
+
+    renderYear(YEARS[YEARS.length - 1]);
+  </script>
+
+</body>
+</html>
