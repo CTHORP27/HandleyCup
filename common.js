@@ -219,6 +219,31 @@ document.addEventListener('click', (e) => {
 })();
 
 /* =============================================================================
+   MOBILE NAV TOGGLE
+   The hamburger button (.nav-toggle) shows/hides .nav-links on narrow screens.
+   Also closes the menu automatically when a link inside it is clicked, and
+   when clicking anywhere outside the open menu.
+   ========================================================================= */
+document.addEventListener('click', (e) => {
+  const toggle = e.target.closest('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (!links) return;
+
+  if (toggle) {
+    const open = links.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    return;
+  }
+  if (e.target.closest('.nav-links a')) {
+    links.classList.remove('nav-open');
+    return;
+  }
+  if (links.classList.contains('nav-open') && !links.contains(e.target) && !e.target.closest('.nav-toggle')) {
+    links.classList.remove('nav-open');
+  }
+});
+
+/* =============================================================================
    COLLAPSIBLE SECTIONS
    Mark a heading with class="section-heading collapsible" and
    data-collapse-target="someId" (pointing at the content to hide/show), plus

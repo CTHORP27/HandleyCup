@@ -67,6 +67,34 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  color: var(--cream);
+  font-size: 16px;
+  line-height: 1;
+  padding: 6px 11px;
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  .site-logo { order: 1; }
+  .nav-toggle { display: block; order: 2; }
+  .nav-search { order: 3; }
+  .nav-links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+    margin-top: 4px;
+    border-top: 1px solid var(--hairline);
+  }
+  .nav-links.nav-open { display: flex; }
+}
 .nav-links a {
   color: var(--cream);
 }
@@ -1834,3 +1862,40 @@ table.cmp-table td {
 }
 
 /* ---------- Player Comparison page ---------- */
+
+/* ---------- Page reveal lock screen ---------- */
+.reveal-lock-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  padding: 40px 24px;
+}
+.reveal-lock-inner { max-width: 440px; text-align: center; }
+.reveal-lock-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel-dim);
+  margin-bottom: 14px;
+}
+.reveal-lock-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+.reveal-lock-sub {
+  font-size: 15px;
+  color: var(--cream);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.reveal-lock-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+}
