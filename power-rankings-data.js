@@ -5,7 +5,7 @@
    PLUS a flat appearance bonus just for entering that year:
 
    Handley Cup:    Winner=100, Runner-Up=50, Semi-Final=25, Quarter-Final=15,
-                   Last 32=10, Other (e.g. Last 16)=5
+                   Last 32=10, Last 24=10 (mirrors Last 32), Other (e.g. Last 16)=5
    Parson's Plate: Winner=25,  Runner-Up=15,  Semi-Final=10, Other=5
    Appearance bonus: +10 per player, per year entered (either competition),
                       stacked on top of the round points above.
@@ -30,11 +30,11 @@ const POWER_RANKINGS = [
   { rank: 10, id: "morgan-shillito", name: "Morgan Shillito", nickname: "Captain", appearances: 4, score: 125, cupTitles: 0, cupRunnerUps: 1, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Runner-Up" } },
   { rank: 11, id: "dom-tofts", name: "Dom Tofts", nickname: "Loftus Toftus", appearances: 4, score: 120, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Semi-Final" } },
   { rank: 12, id: "will-sturla", name: "Will Sturla", nickname: "The Conqueror", appearances: 1, score: 110, cupTitles: 1, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Winner" } },
-  { rank: 13, id: "nathan-hemmingway", name: "Nathan Hemmingway", nickname: "Ginger Spice", appearances: 5, score: 110, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Semi-Final" } },
-  { rank: 14, id: "oli-bartlett", name: "Oli Bartlett", nickname: "Bomber", appearances: 5, score: 105, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Quarter-Final" } },
-  { rank: 15, id: "dan-harrison", name: "Dan Harrison", nickname: "Mr Mardy", appearances: 5, score: 100, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Semi-Final" } },
-  { rank: 16, id: "connor-bowler", name: "Connor Bowler", nickname: "Tenpin", appearances: 2, score: 95, cupTitles: 0, cupRunnerUps: 1, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Runner-Up" } },
-  { rank: 17, id: "bradley-truelove", name: "Bradley Truelove", nickname: "TheOne", appearances: 3, score: 85, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Semi-Final" } },
+  { rank: 13, id: "oli-bartlett", name: "Oli Bartlett", nickname: "Bomber", appearances: 5, score: 105, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Quarter-Final" } },
+  { rank: 14, id: "dan-harrison", name: "Dan Harrison", nickname: "Mr Mardy", appearances: 5, score: 100, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Semi-Final" } },
+  { rank: 15, id: "nathan-hemmingway", name: "Nathan Hemmingway", nickname: "Ginger Spice", appearances: 5, score: 100, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Semi-Final" } },
+  { rank: 16, id: "bradley-truelove", name: "Bradley Truelove", nickname: "TheOne", appearances: 3, score: 85, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Semi-Final" } },
+  { rank: 17, id: "connor-bowler", name: "Connor Bowler", nickname: "Tenpin", appearances: 2, score: 85, cupTitles: 0, cupRunnerUps: 1, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Runner-Up" } },
   { rank: 18, id: "oli-gubbins", name: "Oli Gubbins", nickname: "Gubby", appearances: 3, score: 75, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Runner-Up" } },
   { rank: 19, id: "jessie-sale", name: "Jessie Sale", nickname: "Half Price", appearances: 4, score: 70, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 20, id: "hugo-nilsson", name: "Hugo Nilsson", nickname: "The Scandinavian Express", appearances: 3, score: 70, cupTitles: 0, cupRunnerUps: 0, plateTitles: 1, bestRun: { label: "Parson's Plate", detail: "Winner" } },
@@ -48,8 +48,8 @@ const POWER_RANKINGS = [
   { rank: 28, id: "zach-hodgson", name: "Zach Hodgson", nickname: "The Swan", appearances: 3, score: 55, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 29, id: "jack-clucas", name: "Jack Clucas", nickname: "Jack, Sack and Crack", appearances: 3, score: 50, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 30, id: "laura-bugge", name: "Laura Bugge", nickname: "Budgie", appearances: 2, score: 50, cupTitles: 0, cupRunnerUps: 0, plateTitles: 1, bestRun: { label: "Parson's Plate", detail: "Winner" } },
-  { rank: 31, id: "will-ellis", name: "Will Ellis", nickname: "Lisandro", appearances: 3, score: 45, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Last 16" } },
-  { rank: 32, id: "dereece-ohara", name: "Dereece O'Hara", nickname: "The Jamaican Sensation", appearances: 3, score: 45, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
+  { rank: 31, id: "dereece-ohara", name: "Dereece O'Hara", nickname: "The Jamaican Sensation", appearances: 3, score: 50, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Semi-Final" } },
+  { rank: 32, id: "will-ellis", name: "Will Ellis", nickname: "Lisandro", appearances: 3, score: 45, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Last 16" } },
   { rank: 33, id: "kelham-elliot", name: "Kelham Elliot", nickname: "The Telescope Maker", appearances: 3, score: 45, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 34, id: "joe-ellett", name: "Joe Ellett", nickname: "Blonde Joevi", appearances: 3, score: 45, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 35, id: "will-north", name: "Will North", nickname: "King of the North", appearances: 2, score: 40, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Quarter-Final" } },

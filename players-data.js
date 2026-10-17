@@ -30,7 +30,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Handley Cup", detail: "Last 16" },
     nickname: "The Sauce",
-    writeup: `The fresher, the pretender, the sauce! Underwhelmed last year after mopping up Players Champs. Backing the lad to bounce back in spades and claim more than a few titles next season`,
+    writeup: `The spearhead, the pretender, the sauce! Just as handy on the oche than he is at the crease. Underwhelmed last year after mopping up Players Champs. Backing the lad to bounce back in spades and claim more than a few titles next season`,
     highestAverage: { value: 66.58, link: "https://recap.dartconnect.com/matches/6974e94e0efa95bbe4954944" },
     oneEighties: null,
     quickestLeg: null,
@@ -57,7 +57,7 @@ const PLAYERS = [
     placeholder: false,
     timeline: [
       { year: "23/24", competition: "Handley Cup", result: "Last 16", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-4", scoreReconstructed: false, average: null, link: null },
-      { year: "24/25", competition: "Parson's Plate", result: "Runner-Up", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "2-4", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Runner-Up", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "2-3", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Handley Cup", result: "Last 24", opponentId: "will-ellis", opponentName: "Will Ellis", score: "1-4", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -79,9 +79,9 @@ const PLAYERS = [
       { year: "19/20", competition: "Parson's Plate", result: "Semi-Final", opponentId: "laura-bugge", opponentName: "Laura Bugge", score: "1-2", scoreReconstructed: true, average: null, link: null },
       { year: "20/21", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "nathan-hemmingway", opponentName: "Nathan Hemmingway", score: "0-3", scoreReconstructed: false, average: null, link: null },
       { year: "21/22", competition: "Parson's Plate", result: "Runner-Up", opponentId: "cam-thorpe", opponentName: "Cam Thorpe", score: "0-3", scoreReconstructed: false, average: null, link: null },
-      { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "zach-hodgson", opponentName: "Zach Hodgson", score: "0-4", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "zach-hodgson", opponentName: "Zach Hodgson", score: "1-4", scoreReconstructed: false, average: null, link: null },
       { year: "23/24", competition: "Parson's Plate", result: "Semi-Final", opponentId: "finley-sanderson", opponentName: "Finley Sanderson", score: "0-4", scoreReconstructed: false, average: null, link: null },
-      { year: "24/25", competition: "Parson's Plate", result: "Last 16", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "1-3", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Last 16", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "2-3", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Parson's Plate", result: "Last 24", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "0-3", scoreReconstructed: false, average: null, link: null },
     ]
   },
@@ -102,7 +102,7 @@ const PLAYERS = [
     timeline: [
       { year: "21/22", competition: "Handley Cup", result: "Quarter-Final", opponentId: "jamie-flint", opponentName: "Jamie Flint", score: "0-3", scoreReconstructed: false, average: null, link: null },
       { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "oli-bartlett", opponentName: "Oli Bartlett", score: "0-4", scoreReconstructed: false, average: null, link: null },
-      { year: "23/24", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "alex-wright", opponentName: "Alex Wright", score: "0-3", scoreReconstructed: false, average: null, link: null },
+      { year: "23/24", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "alex-wright", opponentName: "Alex Wright", score: "1-3", scoreReconstructed: false, average: null, link: null },
       { year: "25/26", competition: "Parson's Plate", result: "Last 24", opponentId: "thomas-palmer", opponentName: "Thomas Palmer", score: "1-3", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -172,7 +172,7 @@ const PLAYERS = [
       { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "jamie-flint", opponentName: "Jamie Flint", score: "2-4", scoreReconstructed: true, average: null, link: null },
       { year: "23/24", competition: "Handley Cup", result: "Quarter-Final", opponentId: "bradley-truelove", opponentName: "Bradley Truelove", score: "1-4", scoreReconstructed: true, average: null, link: null },
       { year: "24/25", competition: "Handley Cup", result: "Last 16", opponentId: "curtis-thorpe", opponentName: "Curtis Thorpe", score: "1-4", scoreReconstructed: true, average: null, link: null },
-      { year: "25/26", competition: "Parson's Plate", result: "Winner", opponentId: "reuben-evans", opponentName: "Reuben Evans", score: "1-5", scoreReconstructed: true, average: null, link: null },
+      { year: "25/26", competition: "Parson's Plate", result: "Winner", opponentId: "reuben-evans", opponentName: "Reuben Evans", score: "5-1", scoreReconstructed: true, average: null, link: null },
     ]
   },
   {
@@ -302,7 +302,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Handley Cup", detail: "Last 24" },
     nickname: "Frost",
-    writeup: `Frost has been so tidy at the PCs this year, he was an outside chance to make a deep run or win the plate. Sadly he ran into Moggy in his arena of Yorkshire Main, averages clocking over 60 for Jack shows he has a touch of class and ability`,
+    writeup: `Just the one year at Hallam Darts but Frost was a big part of last years title winning team. He was an outside chance to make a deep run or win the plate. Sadly he ran into Moggy in his arena of Yorkshire Main, averages clocking over 60 for Jack shows he has a touch of class and ability`,
     highestAverage: { value: 61.37, link: "https://recap.dartconnect.com/matches/69750db00efa95bbe4957e3c" },
     oneEighties: 1,
     quickestLeg: null,
@@ -407,8 +407,8 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "23/24", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "0-3", scoreReconstructed: false, average: null, link: null },
-      { year: "24/25", competition: "Parson's Plate", result: "Winner", opponentId: "oliver-wilson", opponentName: "Oliver Wilson", score: "4-2", scoreReconstructed: true, average: null, link: null },
+      { year: "23/24", competition: "Parson's Plate", result: "Withdrew", opponentId: null, opponentName: null, score: null, scoreReconstructed: false, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Winner", opponentId: "oliver-wilson", opponentName: "Oliver Wilson", score: "3-2", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Handley Cup", result: "Last 24", opponentId: "hedley-paul-keegan", opponentName: "Hedley-Paul Keegan", score: "1-4", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -446,7 +446,7 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "24/25", competition: "Parson's Plate", result: "Last 32", opponentId: "alex-botha", opponentName: "Alex Botha", score: "1-3", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Last 24", opponentId: "alex-botha", opponentName: "Alex Botha", score: "1-3", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Parson's Plate", result: "Last 16", opponentId: "joe-ellett", opponentName: "Joe Ellett", score: "1-3", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -465,7 +465,7 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "24/25", competition: "Parson's Plate", result: "Last 32", opponentId: "dan-harrison", opponentName: "Dan Harrison", score: "1-3", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Last 24", opponentId: "dan-harrison", opponentName: "Dan Harrison", score: "1-3", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Handley Cup", result: "Last 24", opponentId: "james-buckby", opponentName: "James Buckby", score: "0-4", scoreReconstructed: false, average: null, link: null },
     ]
   },
@@ -493,7 +493,7 @@ const PLAYERS = [
     name: "Dereece O'Hara",
     appearances: 3,
     nationality: "Jamaica",
-    bestRun: { label: "Parson's Plate", detail: "Quarter-Final" },
+    bestRun: { label: "Parson's Plate", detail: "Semi-Final" },
     nickname: "The Jamaican Sensation",
     writeup: `If we don't talk about his Varsity performances and more about him having his airpods surgically removed from his ears. The Jamaican Sensation is always a tricky customer in the Handley cup snatching group stage games if you're not on your A game, having some rough draws vs Thorpe, Tofts and Castaldo to end his campaigns earlier than he would have liked`,
     highestAverage: { value: 58.56, link: "https://recap.dartconnect.com/matches/67826ef5167d4efa93f7bab1" },
@@ -505,7 +505,7 @@ const PLAYERS = [
     timeline: [
       { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "curtis-thorpe", opponentName: "Curtis Thorpe", score: "1-4", scoreReconstructed: true, average: null, link: null },
       { year: "24/25", competition: "Handley Cup", result: "Last 16", opponentId: "dom-tofts", opponentName: "Dom Tofts", score: "1-4", scoreReconstructed: true, average: null, link: null },
-      { year: "25/26", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "eddie-castaldo", opponentName: "Eddie Castaldo", score: "0-4", scoreReconstructed: false, average: null, link: null },
+      { year: "25/26", competition: "Parson's Plate", result: "Semi-Final", opponentId: "eddie-castaldo", opponentName: "Eddie Castaldo", score: "0-4", scoreReconstructed: false, average: null, link: null },
     ]
   },
   {
@@ -515,7 +515,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Quarter-Final" },
     nickname: "Timberdick",
-    writeup: `Your Pres next year. Timberdick played in a pretty stacked group with legends such as Ingber and Flint and acquitted himself very well, the second highest running average of the Plate on debut but ran into Eddie to end his hopes. Callum will look to improve next season and make a claim on the Cup or at least ruin a few people's runs...`,
+    writeup: `Your Pres this year. Timberdick played in a pretty stacked group with legends such as Ingber and Flint and acquitted himself very well, the second highest running average of the Plate on debut but ran into Eddie to end his hopes. Callum will look to improve this season and make a claim on the Cup or at least ruin a few people's runs...`,
     highestAverage: { value: 69.6, link: "https://recap.dartconnect.com/matches/6974f0600efa95bbe495528e" },
     oneEighties: 1,
     quickestLeg: null,
@@ -533,7 +533,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 16" },
     nickname: "Palmer",
-    writeup: `Palmer made a good account of himself on debut and was unlucky with the draw in the plate to run into an unstoppable Castaldo`,
+    writeup: `Palmer made a good account of himself on debut and has made improvements on his game over the last year. He was unlucky with the draw in the plate to run into an unstoppable Castaldo`,
     highestAverage: { value: 57.91, link: "https://recap.dartconnect.com/matches/69751dda0efa95bbe49597c9" },
     oneEighties: null,
     quickestLeg: null,
@@ -614,7 +614,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Handley Cup", detail: "Last 16" },
     nickname: "The Havoc",
-    writeup: `Chaos, shithouse, box office. Jono made it out of the groups and went on a tidy little run. More of the same this season as he looks to be an A team staple`,
+    writeup: `Shithouse, box office, havoc. Jono made it out of the groups and went on a tidy little run. More of the same this season as he looks to be an A team staple`,
     highestAverage: { value: 57.08, link: "https://recap.dartconnect.com/matches/6974dbf80efa95bbe49538ae" },
     oneEighties: null,
     quickestLeg: null,
@@ -652,7 +652,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Quarter-Final" },
     nickname: "Miracle Maker",
-    writeup: `Dumbbells and doubles for Davies. The boy can play and press. Matt is always an outside shot to cause an upset or have a run in the plate`,
+    writeup: `Dumbbells and doubles for Davies. The boy can play and press. Hitting a 180 in his first pub league visit, Matt is always an outside shot to cause an upset or have a run in the plate`,
     highestAverage: { value: 55.85, link: "https://recap.dartconnect.com/matches/6974c4980efa95bbe4951ad0" },
     oneEighties: null,
     quickestLeg: null,
@@ -715,7 +715,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 16" },
     nickname: "Gunnie Winnie",
-    writeup: `A quick improver with natural talent and the aura to match Olly is one to look out for in the upcoming season. A team regular? It's on the cards...`,
+    writeup: `Mr Indie. A quick improver with natural talent and the aura to match Olly is one to look out for in the upcoming season. A team regular? It's on the cards...`,
     highestAverage: { value: 57.59, link: "https://recap.dartconnect.com/matches/6974deac0efa95bbe4953c09" },
     oneEighties: null,
     quickestLeg: null,
@@ -873,7 +873,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 16" },
     nickname: "ShitHowes",
-    writeup: `Shithowes was the last man to sign up to the event but not the first out, unlucky in a tight group for Alex, being beaten by his future captain Woodcock`,
+    writeup: `Shithowes was the last man to sign up to the event but not the first out, unlucky in a tight group for Alex, being beaten by Woodcock`,
     highestAverage: { value: 58.74, link: "https://recap.dartconnect.com/matches/6974f3890efa95bbe49556c5" },
     oneEighties: 1,
     quickestLeg: null,
@@ -941,7 +941,7 @@ const PLAYERS = [
       { year: "20/21", competition: "Handley Cup", result: "Last 16", opponentId: "oli-bartlett", opponentName: "Oli Bartlett", score: "1-4", scoreReconstructed: true, average: null, link: null },
       { year: "21/22", competition: "Handley Cup", result: "Semi-Final", opponentId: "bart-timmer", opponentName: "Bart Timmer", score: "0-4", scoreReconstructed: false, average: null, link: null },
       { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "oliver-burgess", opponentName: "Oliver Burgess", score: "3-4", scoreReconstructed: true, average: null, link: null },
-      { year: "24/25", competition: "Parson's Plate", result: "Last 32", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "2-3", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Last 24", opponentId: "hugo-nilsson", opponentName: "Hugo Nilsson", score: "2-3", scoreReconstructed: true, average: null, link: null },
       { year: "25/26", competition: "Handley Cup", result: "Last 24", opponentId: "billy-bennett", opponentName: "Billy Bennett", score: "3-4", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -998,7 +998,7 @@ const PLAYERS = [
     timeline: [
       { year: "19/20", competition: "Handley Cup", result: "Quarter-Final", opponentId: "dom-tofts", opponentName: "Dom Tofts", score: "1-3", scoreReconstructed: true, average: null, link: null },
       { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "calum-brown", opponentName: "Calum Brown", score: "0-3", scoreReconstructed: false, average: null, link: null },
-      { year: "24/25", competition: "Parson's Plate", result: "Last 32", opponentId: "oliver-wilson", opponentName: "Oliver Wilson", score: "1-3", scoreReconstructed: true, average: null, link: null },
+      { year: "24/25", competition: "Parson's Plate", result: "Last 24", opponentId: "oliver-wilson", opponentName: "Oliver Wilson", score: "1-3", scoreReconstructed: true, average: null, link: null },
     ]
   },
   {
@@ -1026,7 +1026,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Quarter-Final" },
     nickname: "Pay 2 Win",
-    writeup: `Pay 2 Win, should be spending some more cash on the board and at the bar. A debut last year coming to an end at the hands of one Wicked Wilson`,
+    writeup: `Pay 2 Win, should be spending some more cash on the board and at the bar.`,
     highestAverage: { value: 39.12, link: "https://recap.dartconnect.com/matches/6782d243167d4efa93f821af" },
     oneEighties: null,
     quickestLeg: null,
@@ -1055,7 +1055,7 @@ const PLAYERS = [
       { year: "18/19", competition: "Handley Cup", result: "Quarter-Final", opponentId: "will-sturla", opponentName: "Will Sturla", score: "2-4", scoreReconstructed: false, average: null, link: null },
       { year: "19/20", competition: "Handley Cup", result: "Last 16", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "2-3", scoreReconstructed: true, average: null, link: null },
       { year: "20/21", competition: "Handley Cup", result: "Quarter-Final", opponentId: "dale-dennett", opponentName: "Dale Dennett", score: "1-4", scoreReconstructed: true, average: null, link: null },
-      { year: "22/23", competition: "Handley Cup", result: "Quarter-Final", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-5", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Handley Cup", result: "Quarter-Final", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-4", scoreReconstructed: false, average: null, link: null },
       { year: "24/25", competition: "Handley Cup", result: "Last 16", opponentId: "oliver-burgess", opponentName: "Oliver Burgess", score: "0-4", scoreReconstructed: false, average: null, link: null },
     ]
   },
@@ -1189,7 +1189,7 @@ const PLAYERS = [
       { year: "19/20", competition: "Parson's Plate", result: "Runner-Up", opponentId: "laura-bugge", opponentName: "Laura Bugge", score: "1-2", scoreReconstructed: true, average: null, link: null },
       { year: "20/21", competition: "Parson's Plate", result: "Semi-Final", opponentId: "oli-gubbins", opponentName: "Oli Gubbins", score: "2-4", scoreReconstructed: true, average: null, link: null },
       { year: "21/22", competition: "Handley Cup", result: "Quarter-Final", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-3", scoreReconstructed: false, average: null, link: null },
-      { year: "22/23", competition: "Handley Cup", result: "Quarter-Final", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-4", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Handley Cup", result: "Last 16", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "0-4", scoreReconstructed: false, average: null, link: null },
     ]
   },
   {
@@ -1317,7 +1317,7 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "harvey-thompson", opponentName: "Harvey Thompson", score: "0-3", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "0-3", scoreReconstructed: false, average: null, link: null },
     ]
   },
   {
@@ -1335,7 +1335,7 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "oli-gubbins", opponentName: "Oli Gubbins", score: "0-4", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "oli-gubbins", opponentName: "Oli Gubbins", score: "0-3", scoreReconstructed: false, average: null, link: null },
       { year: "23/24", competition: "Parson's Plate", result: "Semi-Final", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "1-4", scoreReconstructed: true, average: null, link: null },
     ]
   },
@@ -1409,7 +1409,7 @@ const PLAYERS = [
     facts: [],
     placeholder: false,
     timeline: [
-      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "todd-haynes", opponentName: "Todd Haynes", score: "0-4", scoreReconstructed: false, average: null, link: null },
+      { year: "22/23", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "harvey-thompson", opponentName: "Harvey Thompson", score: "0-3", scoreReconstructed: false, average: null, link: null },
     ]
   },
   {
@@ -1465,7 +1465,7 @@ const PLAYERS = [
     placeholder: false,
     timeline: [
       { year: "22/23", competition: "Handley Cup", result: "Runner-Up", opponentId: "charlie-marshall", opponentName: "Charlie Marshall", score: "4-6", scoreReconstructed: true, average: null, link: null },
-      { year: "23/24", competition: "Handley Cup", result: "Semi-Final", opponentId: "oliver-burgess", opponentName: "Oliver Burgess", score: "3-5", scoreReconstructed: true, average: null, link: null },
+      { year: "23/24", competition: "Handley Cup", result: "Quarter-Final", opponentId: "oliver-burgess", opponentName: "Oliver Burgess", score: "3-4", scoreReconstructed: false, average: null, link: null },
     ]
   },
   {

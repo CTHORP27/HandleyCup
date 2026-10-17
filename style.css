@@ -1899,3 +1899,55 @@ table.cmp-table td {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
 }
+
+/* ---------- Mobile overflow fixes (stop pages scrolling sideways) ---------- */
+.stat-block, .home-nav-card, .h2h-picker > * { min-width: 0; }
+.stat-value, .stat-label, .stat-meta { overflow-wrap: anywhere; }
+.h2h-select { min-width: 0; width: 100%; text-overflow: ellipsis; }
+@media (max-width: 640px) {
+  .home-nav-grid.fixed-5col { grid-template-columns: repeat(2, 1fr); }
+  .h2h-picker { gap: 8px; }
+}
+
+/* ---------- Career Arc: colour timeline ---------- */
+.arc-card { padding: 22px 18px; background: var(--maroon-light); border: 1px solid var(--hairline); border-radius: 8px; font-style: normal; }
+.arc-row { display: flex; gap: 6px; justify-content: center; }
+.arc-cell-wrap { flex: 1 1 0; min-width: 0; max-width: 84px; text-align: center; }
+.arc-year { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--steel-dim); margin-bottom: 6px; white-space: nowrap; }
+.arc-cell {
+  height: 52px; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 16px;
+}
+.arc-key { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin: 18px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--steel-dim); }
+.arc-key-item { display: inline-flex; align-items: center; gap: 6px; }
+.arc-key-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.arc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 20px; }
+.arc-stat { border-radius: 8px; padding: 14px 8px; text-align: center; min-width: 0; }
+.arc-stat.has { background: #76AC5A; color: #000; }
+.arc-stat.none { background: #CC0000; color: #fff; }
+.arc-stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; }
+.arc-stat-value { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 28px; line-height: 1.2; margin-top: 4px; }
+.arc-stat-unit { font-size: 12px; font-weight: 500; }
+.arc-stat-note { font-size: 10px; opacity: 0.85; }
+@media (max-width: 480px) {
+  .arc-row { gap: 3px; }
+  .arc-cell { height: 40px; font-size: 13px; }
+  .arc-year { font-size: 8px; }
+  .arc-stat-value { font-size: 22px; }
+}
+.player-writeup { overflow-wrap: anywhere; }
+
+/* Career Arc — round labels + big stat headings */
+.arc-code.long { font-size: 13px; letter-spacing: 0; }
+.arc-codes { margin-top: 10px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--steel-dim); line-height: 1.6; }
+.arc-stat-label { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.02em; text-transform: uppercase; opacity: 1; line-height: 1.1; }
+.arc-stat-value { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.1; margin-top: 8px; }
+.arc-stat-unit { font-size: 16px; font-weight: 600; }
+.arc-stat-note { font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.9; }
+@media (max-width: 480px) {
+  .arc-code.long { font-size: 9px; }
+  .arc-cell { font-size: 12px; }
+  .arc-stat-label { font-size: 14px; }
+  .arc-stat-value { font-size: 28px; }
+  .arc-stat-unit { font-size: 11px; }
+}

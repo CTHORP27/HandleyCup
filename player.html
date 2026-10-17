@@ -9,7 +9,7 @@
 <meta property="og:site_name" content="The Handley Cup">
 <meta property="og:title" content="Player Profile — The Handley Cup">
 <meta property="og:description" content="Career record, stats and season-by-season history for a Handley Cup player.">
-<meta property="og:url" content="https://YOUR-DOMAIN-HERE/player.html">
+<meta property="og:url" content="https://thehandleycup.co.uk/player.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -17,17 +17,15 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#672146">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <script src="reveal-config.js"></script>
 <script>
 (function () {
-  var page = location.pathname.split('/').pop() || 'index.html';
-  var revealAt = (typeof REVEAL_DATES !== 'undefined') ? REVEAL_DATES[page] : null;
+  var playerId = new URLSearchParams(location.search).get('id');
+  var revealAt = (typeof PLAYER_REVEAL_DATES !== 'undefined' && playerId) ? PLAYER_REVEAL_DATES[playerId] : null;
   if (revealAt && new Date() < new Date(revealAt)) {
     var d = new Date(revealAt);
     var dateStr = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
@@ -36,8 +34,8 @@
       '<style>body > *:not(.reveal-lock-screen){display:none !important;}</style>' +
       '<div class="reveal-lock-screen"><div class="reveal-lock-inner">' +
         '<div class="reveal-lock-eyebrow">The Handley Cup</div>' +
-        '<h1 class="reveal-lock-title">Coming Soon</h1>' +
-        '<p class="reveal-lock-sub">This page unlocks ' + dateStr + ' at ' + timeStr + '.</p>' +
+        '<h1 class="reveal-lock-title">Not Revealed Yet</h1>' +
+        '<p class="reveal-lock-sub">This player hasn\u2019t been revealed yet \u2014 check back ' + dateStr + ' at ' + timeStr + '.</p>' +
         '<a class="reveal-lock-link" href="index.html">\u2190 Back to the homepage</a>' +
       '</div></div>'
     );
@@ -100,7 +98,7 @@
       </svg>`;
     }
 
-    const igLinkHtml = `<a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
+    const igLinkHtml = `<a href="about.html">About &amp; Privacy</a><a class="ig-link" href="https://www.instagram.com/hallamdarts/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
         @hallamdarts
       </a>`;
@@ -113,85 +111,89 @@
       document.querySelectorAll('meta[property="og:description"]').forEach(t => t.setAttribute('content', desc));
     }
 
-    // ---- Career Arc: best-run tier by year, plotted as a simple line chart ----
-    // Mirrors the same tiering used on The Sheet / Compare Players, so "higher"
-    // always means a better run that season. Tiers are evenly spaced rungs on a
-    // ladder (0-7) rather than raw round numbers, so the vertical gaps between
-    // them are always equal regardless of how many named rounds sit between two
-    // tiers.
-    const ARC_TIERS = [
-      { max: 0, short: 'Grp', label: 'Group Stage' },
-      { max: 1, short: 'L16-24', label: 'Last 16 / Last 24 / Last 32' },
-      { max: 2, short: 'QF', label: 'Quarter-Final' },
-      { max: 3, short: 'PRU', label: "Parson's Plate Runner-Up" },
-      { max: 4, short: 'SF', label: 'Semi-Final' },
-      { max: 5, short: 'PW', label: "Parson's Plate Winner" },
-      { max: 6, short: 'RU', label: 'Cup Runner-Up' },
-      { max: 7, short: 'CW', label: 'Handley Cup Winner' },
-    ];
-    function tierValue(competition, result) {
+    // ---- Career Arc: colour timeline by season + key stats underneath ----
+    // One coloured block per season (matches the society's original spreadsheet key):
+    // green = attended, red = did not attend, yellow = Handley Cup winner,
+    // light blue = Cup runner-up, orange = Cup semi-finalist, purple = Plate winner.
+    const ARC_STYLES = {
+      cw:  { color: '#FFFF00', text: '#000', code: 'W',  label: 'Champion' },
+      ru:  { color: '#9FC5E8', text: '#000', code: 'RU', label: 'Runner Up' },
+      sf:  { color: '#FF9900', text: '#000', code: 'SF', label: 'Semi Finalist' },
+      pw:  { color: '#9900FF', text: '#fff', code: 'PW', label: 'Plate Champion' },
+      att: { color: '#6AA84F', text: '#fff', code: '✓',  label: 'Attended' },
+      dna: { color: '#CC0000', text: '#fff', code: '–',  label: 'Did not Attend' },
+    };
+    function arcKind(competition, result) {
       const isCup = competition === 'Handley Cup';
-      if (isCup && result === 'Winner') return 7;
-      if (isCup && result === 'Runner-Up') return 6;
-      if (!isCup && result === 'Winner') return 5;
-      if (isCup && result === 'Semi-Final') return 4;
-      if (!isCup && result === 'Semi-Final') return 4;
-      if (!isCup && result === 'Runner-Up') return 3;
-      if (isCup && result === 'Quarter-Final') return 2;
-      if (isCup && (result === 'Last 16' || result === 'Last 24' || result === 'Last 32')) return 1;
-      return 0;
+      if (isCup && result === 'Winner') return 'cw';
+      if (isCup && result === 'Runner-Up') return 'ru';
+      if (isCup && result === 'Semi-Final') return 'sf';
+      if (!isCup && result === 'Winner') return 'pw';
+      return 'att';
     }
+    // short round label shown inside each block (P = Parson's Plate)
+    function arcCode(competition, result) {
+      const isCup = competition === 'Handley Cup';
+      const cup = { 'Winner': 'W', 'Runner-Up': 'RU', 'Semi-Final': 'SF', 'Quarter-Final': 'QF',
+                    'Last 16': 'L16', 'Last 24': 'L24', 'Last 32': 'L32', 'Walkover': 'WO', 'Withdrew': 'WD' };
+      const plate = { 'Winner': 'P W', 'Runner-Up': 'P RUP', 'Semi-Final': 'P SF', 'Quarter-Final': 'P QF',
+                      'Last 16': 'P 16', 'Last 24': 'P 24', 'Last 32': 'P 32', 'Walkover': 'P WO', 'Withdrew': 'P WD' };
+      return (isCup ? cup : plate)[result] || (isCup ? '' : 'P ') + String(result).slice(0, 3).toUpperCase();
+    }
+    const ARC_RANK = { dna: 0, att: 1, pw: 2, sf: 3, ru: 4, cw: 5 };
 
     function renderCareerArc(player) {
       const section = document.getElementById('careerArcSection');
       const box = document.getElementById('careerArcBox');
-      const timeline = (player.timeline || []).slice().sort((a, b) => a.year.localeCompare(b.year));
-      if (timeline.length < 2) return; // not much of an "arc" with a single data point
-
+      const timeline = player.timeline || [];
+      if (!timeline.length) return;
       section.style.display = '';
 
-      // best tier reached per year (a player can have a Cup and Plate result the same year — take the best)
-      const byYear = {};
-      timeline.forEach(t => {
-        const v = tierValue(t.competition, t.result);
-        if (!(t.year in byYear) || v > byYear[t.year].value) {
-          byYear[t.year] = { value: v, competition: t.competition, result: t.result };
-        }
-      });
-      const years = Object.keys(byYear).sort();
+      // every season the Handley Cup has run, so absences show up as red blocks
+      const seasons = Array.from(new Set(PLAYERS.flatMap(p => (p.timeline || []).map(t => t.year)))).sort();
 
-      const W = 700, H = 260, padL = 36, padR = 20, padT = 16, padB = 34;
-      const plotW = W - padL - padR, plotH = H - padT - padB;
-      const maxTier = 7;
-      const stepX = years.length > 1 ? plotW / (years.length - 1) : 0;
-      const xFor = i => padL + stepX * i;
-      const yFor = v => padT + plotH - (v / maxTier) * plotH;
-
-      const gridLines = ARC_TIERS.map(t => `
-        <line x1="${padL}" y1="${yFor(t.max)}" x2="${W - padR}" y2="${yFor(t.max)}" stroke="var(--hairline)" stroke-width="1" />
-        <text x="${padL - 8}" y="${yFor(t.max) + 4}" text-anchor="end" font-size="9" font-family="IBM Plex Mono, monospace" fill="var(--steel-dim)">${t.short}</text>
-      `).join('');
-
-      const points = years.map((y, i) => `${xFor(i)},${yFor(byYear[y].value)}`).join(' ');
-
-      const dots = years.map((y, i) => {
-        const d = byYear[y];
-        return `
-          <circle cx="${xFor(i)}" cy="${yFor(d.value)}" r="5" fill="var(--pink)" stroke="var(--maroon)" stroke-width="2">
-            <title>${y} — ${d.competition}, ${d.result}</title>
-          </circle>
-          <text x="${xFor(i)}" y="${H - padB + 18}" text-anchor="middle" font-size="10" font-family="IBM Plex Mono, monospace" fill="var(--steel-dim)">${y}</text>
-        `;
+      const cells = seasons.map(y => {
+        let best = null;
+        timeline.filter(t => t.year === y).forEach(t => {
+          const k = arcKind(t.competition, t.result);
+          if (!best || ARC_RANK[k] > ARC_RANK[best.kind]) best = { kind: k, competition: t.competition, result: t.result };
+        });
+        const kind = best ? best.kind : 'dna';
+        const st = ARC_STYLES[kind];
+        const tip = best ? `${y} — ${best.competition}, ${best.result}` : `${y} — did not attend`;
+        const code = best ? arcCode(best.competition, best.result) : st.code;
+        return `<div class="arc-cell-wrap">
+          <div class="arc-year">${y}</div>
+          <div class="arc-cell" style="background:${st.color}; color:${st.text};" title="${tip}"><span class="arc-code${code.length > 2 ? ' long' : ''}">${code}</span></div>
+        </div>`;
       }).join('');
 
+      const legend = ['att', 'dna', 'cw', 'ru', 'sf', 'pw'].map(k =>
+        `<span class="arc-key-item"><span class="arc-key-swatch" style="background:${ARC_STYLES[k].color}"></span>${ARC_STYLES[k].label}</span>`
+      ).join('');
+
+      const stat = (label, value, unit) => {
+        const has = value !== null && value !== undefined;
+        return `<div class="arc-stat ${has ? 'has' : 'none'}">
+          <div class="arc-stat-label">${label}</div>
+          <div class="arc-stat-value">${has ? value : '–'}${has && unit ? `<span class="arc-stat-unit"> ${unit}</span>` : ''}</div>
+          ${has ? '' : '<div class="arc-stat-note">Not tracked</div>'}
+        </div>`;
+      };
+      const oneEighties = player.oneEighties ?? null;
+      const highCheckout = player.highestCheckout ? player.highestCheckout.value : null;
+      const quickLeg = player.quickestLeg ? player.quickestLeg.darts : null;
+
       box.innerHTML = `
-        <div class="fact-card" style="padding:20px; overflow-x:auto;">
-          <svg viewBox="0 0 ${W} ${H}" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
-            ${gridLines}
-            <polyline points="${points}" fill="none" stroke="var(--pink)" stroke-width="2" opacity="0.8" />
-            ${dots}
-          </svg>
-          <div class="stat-meta" style="text-align:center; margin-top:4px;">Best round reached each season entered — hover a point for the exact result.</div>
+        <div class="arc-card">
+          <div class="arc-row">${cells}</div>
+          <div class="arc-key">${legend}</div>
+          <div class="arc-codes">L16 / L24 / L32 = last 16, 24 or 32 · QF · SF · RU = runner-up · W = winner · P = Parson's Plate (P 16, P QF, P SF, P RUP, P W)</div>
+          <div class="arc-stats">
+            ${stat("180's", oneEighties)}
+            ${stat('High Checkout', highCheckout)}
+            ${stat('Quickest Leg', quickLeg, 'darts')}
+          </div>
         </div>`;
     }
 
@@ -295,18 +297,18 @@
           <div id="atrBox"></div>
         </section>
 
+        <section class="page-section" id="careerArcSection" style="display:none;">
+          <div class="section-heading collapsible" data-collapse-target="careerArcBox">Player Performance Timeline<span class="collapse-arrow">▾</span></div>
+          <div id="careerArcBox"></div>
+        </section>
+
         <section class="page-section">
           <div class="section-heading collapsible" data-collapse-target="factsBox">About the Player<span class="collapse-arrow">▾</span></div>
           <div id="factsBox"></div>
         </section>
 
-        <section class="page-section" id="careerArcSection" style="display:none;">
-          <div class="section-heading collapsible" data-collapse-target="careerArcBox">Career Arc<span class="collapse-arrow">▾</span></div>
-          <div id="careerArcBox"></div>
-        </section>
-
         <section class="page-section">
-          <div class="section-heading collapsible" data-collapse-target="timelineWrap">Performance Timeline<span class="collapse-arrow">▾</span></div>
+          <div class="section-heading collapsible" data-collapse-target="timelineWrap">Season Results<span class="collapse-arrow">▾</span></div>
           <div class="timeline-wrap" id="timelineWrap">
             <table class="timeline">
               <caption>Season by season. Scores marked * were recovered from a spreadsheet formatting issue — worth a spot check where you can.</caption>

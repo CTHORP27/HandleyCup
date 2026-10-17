@@ -613,8 +613,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Todd Haynes 3-2 Oli Bartlett",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Todd Haynes 3-2 Oli Bartlett"
         },
         {
           "round": "Prelim",
@@ -629,8 +628,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Joe Evans 3-2 Deck Ingber",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Joe Evans 3-2 Deck Ingber"
         }
       ],
       "Quarter-Final": [
@@ -647,8 +645,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 3-1 Todd Haynes",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Charlie Marshall 3-1 Todd Haynes"
         },
         {
           "round": "Quarter-Final",
@@ -663,8 +660,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Dom Tofts 3-1 Joe Evans",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Dom Tofts 3-1 Joe Evans"
         },
         {
           "round": "Quarter-Final",
@@ -679,8 +675,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Jamie Flint 3-1 Dale Dennett",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Jamie Flint 3-1 Dale Dennett"
         },
         {
           "round": "Quarter-Final",
@@ -695,8 +690,7 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Curtis Thorpe 3-2 Oli Gubbins",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Curtis Thorpe 3-2 Oli Gubbins"
         }
       ],
       "Semi-Final": [
@@ -713,8 +707,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 4-1 Dom Tofts",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Charlie Marshall 4-1 Dom Tofts"
         },
         {
           "round": "Semi-Final",
@@ -729,8 +722,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Jamie Flint 4-2 Curtis Thorpe",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Jamie Flint 4-2 Curtis Thorpe"
         }
       ],
       "Final": [
@@ -747,8 +739,7 @@ const EVENTS = {
           "winnerLegs": 5,
           "loserLegs": 4,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 5-4 Jamie Flint",
-          "source": "Roll of Honour (sheet had no score)"
+          "scoreDisplay": "Charlie Marshall 5-4 Jamie Flint"
         }
       ]
     },
@@ -765,10 +756,9 @@ const EVENTS = {
           "loser": "Henry Wheeler",
           "loserId": "henry-wheeler",
           "winnerLegs": 2,
-          "loserLegs": 0,
+          "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Alex Wright 2-0 Henry Wheeler",
-          "source": "User-supplied (KnockOut sheet had no score)"
+          "scoreDisplay": "Alex Wright 2-1 Henry Wheeler"
         }
       ],
       "Semi-Final": [
@@ -785,8 +775,7 @@ const EVENTS = {
           "winnerLegs": 2,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Laura Bugge 2-1 Alex Wright",
-          "source": "User-supplied (KnockOut sheet had no score)"
+          "scoreDisplay": "Laura Bugge 2-1 Alex Wright"
         },
         {
           "round": "Semi-Final",
@@ -799,10 +788,9 @@ const EVENTS = {
           "loser": "Dan Harrison",
           "loserId": "dan-harrison",
           "winnerLegs": 2,
-          "loserLegs": 0,
+          "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Nathan Hemmingway 2-0 Dan Harrison",
-          "source": "User-supplied (KnockOut sheet had no score)"
+          "scoreDisplay": "Nathan Hemmingway 2-1 Dan Harrison"
         }
       ],
       "Final": [
@@ -819,14 +807,11 @@ const EVENTS = {
           "winnerLegs": 2,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Laura Bugge 2-1 Nathan Hemmingway",
-          "source": "Roll of Honour (sheet had no score)"
+          "scoreDisplay": "Laura Bugge 2-1 Nathan Hemmingway"
         }
       ]
     },
-    "conflicts": [
-      "Final round has no recorded score in the KnockOut sheet — using Roll of Honour score (5-4) instead."
-    ],
+    "conflicts": [],
     "seasonRecap": "We have a group stage! 3 groups of 5, and Dale's magic spreadsheet nonsense — prelim ranks and all sorts.<br><br>\n<strong>Group A</strong> — a brutal group in fairness, with the 2 standout A-team players this season going into the hat. Alex, Deck and Nathan all traded wins with one another.<br><br>\n<strong>Group B</strong> — newbie Tofts showing why he's an A-team regular, winning all 4 games, with Gubbins getting the points needed to join him. Wheeler whitewashed.<br><br>\n<strong>Group C</strong> — who let Curtis back? Flint was unreal, winning all 4 games in style. Thorpe coming in 2nd, with Todd and Evans close on his tail.<br><br>\n<strong>Parson's Plate</strong> — best-of-3 in the duffers, all good fun. Wright taking the prelim vs a legless Wheeler.<br>\n<u>Semi</u> — Laura with a stoppage-time winner over Wright to claim her spot in the final. Hemmingway shithousing Dan to a 2-1 win himself.<br>\n<u>Final</u> — Laura held her nerve against Ginger Spice to secure the first ever Parson's Plate.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Prelims</u> — saw a clash of best pals, Todd vs Bomber and Evans vs Ingber. Todd and Joe the winners here.<br>\n<u>Quarters</u> — Charlie and Dom are on a crash course to meet in the semis, with impressive wins. Thorpe falls over the line in a last leg vs Gubbins, as Flint ends Dale's hopes of a 2nd-year final.<br>\n<u>Semis</u> — Marshall and Flint showing why they're the big 2 in Hallam Darts this season, both easing into a final.<br>\n<u>Final</u> — so much drama, so close, so much quality — but the 2nd name on the Handley Cup trophy goes to The Fire, in a class final, Flinty missing match darts before Marshall roars, hitting game shot.<br><br>\n<strong>180s</strong> — Todd Haynes 1, Jamie Flint 2.<br>\n<strong>21-or-under legs</strong> — Dan Harrison 20; Jamie Flint 16, 17, 18, 19(x2), 20, 21; Charlie Marshall 19, 20; Curtis Thorpe 21.<br>\n<strong>High Outs</strong> — Jamie Flint 118.",
     "seasonSummary": "The first ever group stage format. Charlie Marshall claims his 2nd title in a classic 5-4 final over Jamie Flint, while Laura Bugge wins the inaugural Parson's Plate."
   },
@@ -1317,8 +1302,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Eddie Castaldo 4-2 Dom Tofts",
-          "source": "Confirmed by user"
+          "scoreDisplay": "Eddie Castaldo 4-2 Dom Tofts"
         },
         {
           "round": "Quarter-Final",
@@ -1397,8 +1381,7 @@ const EVENTS = {
           "winnerLegs": 6,
           "loserLegs": 0,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 6-0 Dale Dennett",
-          "source": "Confirmed by user — sheet had loser-first order (0-6), corrected to winner-first"
+          "scoreDisplay": "Charlie Marshall 6-0 Dale Dennett"
         }
       ]
     },
@@ -1511,14 +1494,11 @@ const EVENTS = {
           "winnerLegs": 5,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Cam Thorpe 5-1 Oli Gubbins",
-          "source": "Roll of Honour"
+          "scoreDisplay": "Cam Thorpe 5-1 Oli Gubbins"
         }
       ]
     },
-    "conflicts": [
-      "Plate bracket pairings for this year were unclear in the original sheet (placeholder round labels, one mismatched pairing) — reconstructed by cross-referencing each player's individual match record instead."
-    ],
+    "conflicts": [],
     "seasonRecap": "The Hallam Darts Covid Edition! 3 groups, 17 players and one almighty Zoom call. Let's get into it.<br><br>\n<strong>Group A</strong> — Dennett gets a clean sweep over A-team rivals Thorpe and Flint. Debuts for Rushy and Cam, with the group rounded off by Hemmingway. Curtis wins the battle of the Thorpes with an impressive 72 average, while Dale wins 3-2 over Flint.<br><br>\n<strong>Group B</strong> — the battle for 2nd place was on, with Wright, Gubbins and Bartlett all chasing the spot, but it went to A-team Player of the Season Dom Tofts, finishing 2nd behind defending champion Mr Marshall. Charlie went unbeaten in the group stage, with Dom winning every other game.<br><br>\n<strong>Group C</strong> — easily the most wide-open group. Harrison, Haynes, Ennis, Ingber and Castaldo must've all fancied their chances once the groups were drawn, but it was the Eagle who flew highest, with Super Todd just behind.<br><br>\n<strong>Parson's Plate</strong><br>\n<u>Quarters</u> — a close 5 legs between Ennis and Harrison, Ennis closing it out to reach the semis on debut. Another 3-2 showcase saw Gubbins get the win, joining Hemmingway and Thorpe in the semis.<br>\n<u>Semis</u> — Cam slaps Jamesey in a battle of new vs old, with Gubbins edging out Hemmingway for a spot in the final.<br>\n<u>Final</u> — a Thorpe has finally won something at Hallam, and it's not Curtis. Cam Thorpe, 5-1 winner — take a bow, ginger star boy.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Prelim</u> — Bartlett saw off Ingber, 4-1.<br>\n<u>Quarters</u> — Thorpe clashed with Marshall but Chaz wins again, shocker. Todd pulled off an upset over Flint to set up a semi-final clash, with Eddie and Dale also winning against Bartlett and Tofts.<br>\n<u>Semis</u> — 10-1 combined to Dale and Chaz, as Eddie and Todd fall in the semis.<br>\n<u>Final</u> — there was only one winner. Charlie Marshall takes a bow, taking Dale and his spreadsheets for a dog walk. A big win in the Final — 2 titles now for Marshall, no signs of stopping.<br><br>\n<strong>180s</strong> — Jamesey Ennis 2, Jamie Flint 1, Dale Dennett 2, Oli Bartlett 1, Charlie Marshall 2.<br>\n<strong>21-or-under legs</strong> — Charlie Marshall 16, 17, 18(x3), 19(x4), 20, 21; Curtis Thorpe 15, 18(x3); Eddie Castaldo 21; Jamesey Ennis 19; Jamie Flint 15, 17, 20, 21(x3); Dale Dennett 16, 18, 19, 20(x2), 21(x3); Dom Tofts 20, 21; Oli Bartlett 21; Todd Haynes 20, 21.<br>\n<strong>High Outs</strong> — Curtis Thorpe 100, 118; Oli Gubbins 104; Jamie Flint 113; Eddie Castaldo 107; Jamesey Ennis 111.",
     "seasonSummary": "The Covid Zoom-call edition — 17 players across 3 groups. Charlie Marshall dominates for his 2nd title, and Cam Thorpe wins his first Plate."
   },
@@ -1888,10 +1868,7 @@ const EVENTS = {
         }
       ]
     },
-    "conflicts": [
-      "Group B: Deck Ingber and Curtis Thorpe were tied on both points and leg difference — order broken using the recap's own account (\"Ingber finishing just behind\" the group winner) since the stats gave no clear answer.",
-      "Group B: Jessie Sale and Cam Thorpe were tied on points; Sale ranked above Cam by leg difference (-2 vs -5), consistent with the recap confirming Cam (not Sale) went to the Plate."
-    ],
+    "conflicts": [],
     "seasonRecap": "The Final Handley Cup? One last hurrah for Hallam Darts? I hope not... 10 of the finest Hallam has to offer stepped up today, 2 groups of 5.<br><br>\n<strong>Group A</strong> — on-loan darting superstar Bart Timmer showed quality, winning all 4 games, with Flint, Haynes and Hemmingway making the knockouts and one-to-watch Alex Wright into the Plate.<br><br>\n<strong>Group B</strong> — Charlie Marshall looking for another trophy, with Ingber finishing just behind him, Sale and Thorpe both in the mix too, Cam Thorpe drawing the short straw into the Plate.<br><br>\n<strong>Parson's Plate</strong> — Cam Thorpe wins his 2nd title in 2 years, the Plate just seems to belong to him. Alex not getting a leg, but what a man for turning up.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Quarters</u> — Timmer and Marshall showing why they're group winners, dispatching Thorpe and Hemmingway. Flint and Ingber, the Donny duo, complete the semi-final line-up.<br>\n<u>Semis</u> — the Donny boys drowned in the semis under the might of Chesterfield and Holland, 4-0 each for the group winners.<br>\n<u>Final</u> — a tight final sees Marshall win his 3rd trophy, but a very impressive day for Timmer, who in his short time at Hallam has made one hell of an impact.<br><br>\nIf this is goodbye for Hallam Darts then what a ride it's been — Covid hit the society hard but it still couldn't stop the Handley Cup. The show must surely go on.<br><br>\n<strong>The Sheet</strong> — no sheet was recorded this year, but full group fixtures were.",
     "seasonSummary": "A tiny 10-player Covid-affected field sees Charlie Marshall win his 3rd title over Bart Timmer, while Cam Thorpe claims back-to-back Parson's Plate titles."
   },
@@ -1982,16 +1959,16 @@ const EVENTS = {
           "points": 15
         },
         {
-          "name": "Zach Hodgson",
-          "id": "zach-hodgson",
+          "name": "Oli Bartlett",
+          "id": "oli-bartlett",
           "played": 5,
           "points": 13
         },
         {
-          "name": "Oli Bartlett",
-          "id": "oli-bartlett",
+          "name": "Zach Hodgson",
+          "id": "zach-hodgson",
           "played": 5,
-          "points": 12
+          "points": 13
         },
         {
           "name": "James Buckby",
@@ -2304,6 +2281,14 @@ const EVENTS = {
           "player2": "Oli Bartlett",
           "player2Id": "oli-bartlett",
           "score2": 1
+        },
+        {
+          "player1": "Zach Hodgson",
+          "player1Id": "zach-hodgson",
+          "score1": 2,
+          "player2": "Oli Bartlett",
+          "player2Id": "oli-bartlett",
+          "score2": 3
         },
         {
           "player1": "Todd Haynes",
@@ -2881,9 +2866,7 @@ const EVENTS = {
         }
       ]
     },
-    "conflicts": [
-      "Group C: found a duplicate fixture entry (Curtis Thorpe vs Zach Hodgson recorded twice) which meant Oli Bartlett vs Zach Hodgson was never actually recorded — removed the duplicate, but that one match result is still missing. If you have it, send it over."
-    ],
+    "conflicts": [],
     "seasonRecap": "5 events already! We're so back — doubling our numbers and then some, Hallam Darts back from the dead and the Handley Cup a roaring success. <strong>24 players, 4 groups</strong>, let's get into it.<br><br>\n<strong>Group A</strong> — 4 old boys and 2 from the new school, but it was Ingber on top after an impressive display in a group boasting Hemmingway, Shillito, Castaldo, Evans and Stewart. Pick of the game: Ingber showing who Donny's number 1 is, beating Shillito 3-1 and Evans by the same scoreline.<br><br>\n<strong>Group B</strong> — Darts Dale! Dennett didn't drop a game in the groups, a perfect 5/5 record, with Sale becoming the first woman to qualify from the groups in a live event. Alex the one to watch, and Dereece rounding out the group. Jessie with a huge win over Dereece 3-0, Dale only dropping 1 leg all group.<br><br>\n<strong>Group C</strong> — the closest group on paper looked too hard to call. Thorpe topped a group with prospects Hodgson and Buckby, while old boy \"Bomber\" Bartlett snuck in 3rd. Todd dropped to the Plate. Thorpe boasted a perfect record but had some scares along the way.<br><br>\n<strong>Group D</strong> — easily the hardest group in Handley Cup history: Marshall, Flint, Bowler, OPB, Gubbins, Brown. How's your luck! The defending champ battled hard to go unbeaten, only dropping 1 leg all group — stupid. Bowler 2nd, beating the rest, while Jamie and Burgess sneak their way into the Cup. Brown and Gubbins ones to watch in the Plate.<br><br>\n<strong>The Plate</strong><br>\nQuarters — with 2 drop-outs, it was only Brown and Gubbins who needed to win to reach the semis, and the pair did just that, not dropping a leg. Semis — Brown and Gubbins smashed their way into the final, beating Thompson and Haynes. Final — a high-quality final, won by the man with the best 'tache in darts, the Scotsman Calum, claiming a 5-2 win over Hallam's own Wayne Gretzky.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Last 16</u> — Ingber carried his fine form, going 3-0 up on OPB, but the cheeky monkey didn't give up, reeling off 4 magic legs on the spin — Ingber left spitting feathers. The other 3 qualifiers from the group of death all stormed through, as well as group winners Thorpe and Dennett. A tough last 8 awaited.<br>\n<u>Quarters</u> — Bowler and Burgess both won comfortably over Zodge and Thorpe, showing Group D's quality yet again. Dennett met Marshall in the other semi-final — Charlie yet to drop a leg in the knockouts.<br>\n<u>Semis</u> — Marshall now a mind-bending 14-0 in KO legs on the day, with Bowler only dropping 1 to Marshall to set up a mouth-watering final.<br>\n<u>Final</u> — BackToBackToBackToBack for Mr Marshall in his toughest final yet, battling Tenpin over 10 legs and coming out a 6-4 victor.<br><br>\n<strong>The Sheet</strong><br>\n<u>180s</u> — Charlie 7, Bowler 4, Thorpe 1, Flint 2.<br>\n<u>Legs</u> — Marshall 14, 15(x2), 16, 17(x5); Bowler 15, 16(x3), 17(x2); Buckby 17.<br>\n<u>High Outs</u> — Ingber 108, Castaldo 115, Ingber 125, Dennett 111.",
     "seasonSummary": "Hallam Darts roars back from Covid with 24 players. Charlie Marshall wins a tense 6-4 final over Connor Bowler, and Calum Brown becomes the first Scottish champion, winning the Plate."
   },
@@ -3602,8 +3585,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Morgan Shillito 4-1 Fillip Brom",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Morgan Shillito 4-1 Fillip Brom"
         },
         {
           "round": "Last 16",
@@ -3648,8 +3630,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 2,
           "scoreReconstructed": true,
-          "scoreDisplay": "Dale Dennett 4-2 Zach Hodgson",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Dale Dennett 4-2 Zach Hodgson"
         },
         {
           "round": "Last 16",
@@ -3664,8 +3645,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Connor Bowler 4-1 Will Ellis",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Connor Bowler 4-1 Will Ellis"
         },
         {
           "round": "Last 16",
@@ -3695,8 +3675,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 3,
           "scoreReconstructed": true,
-          "scoreDisplay": "Eddie Castaldo 4-3 Curtis Thorpe",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Eddie Castaldo 4-3 Curtis Thorpe"
         },
         {
           "round": "Last 16",
@@ -3728,8 +3707,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Charlie Marshall 4-1 Morgan Shillito",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Charlie Marshall 4-1 Morgan Shillito"
         },
         {
           "round": "Quarter-Final",
@@ -3774,8 +3752,7 @@ const EVENTS = {
           "winnerLegs": 4,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Bradley Truelove 4-1 Eddie Castaldo",
-          "source": "Winner deduced from later-round appearance"
+          "scoreDisplay": "Bradley Truelove 4-1 Eddie Castaldo"
         }
       ],
       "Semi-Final": [
@@ -3824,8 +3801,7 @@ const EVENTS = {
           "winnerLegs": 6,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 6-2 Oliver Burgess",
-          "source": "Roll of Honour"
+          "scoreDisplay": "Charlie Marshall 6-2 Oliver Burgess"
         }
       ]
     },
@@ -3938,14 +3914,11 @@ const EVENTS = {
           "winnerLegs": 5,
           "loserLegs": 2,
           "scoreReconstructed": true,
-          "scoreDisplay": "Todd Haynes 5-2 Finley Sanderson",
-          "source": "Roll of Honour (sheet had no Final score)"
+          "scoreDisplay": "Todd Haynes 5-2 Finley Sanderson"
         }
       ]
     },
-    "conflicts": [
-      "Plate Final had no recorded score in the sheet — used Roll of Honour's score (5-2) instead."
-    ],
+    "conflicts": [],
     "seasonRecap": "The 23/24 Handley Cup boasted <strong>25 players</strong>, a new record! 4 old faces kept the streak alive of attending every event — Marshall, Thorpe, Flint and Haynes. Will Charlie win it again? Yeah, probably.<br><br>\n<strong>Group A</strong> — Marshall started strong with a 143 checkout in his first game, dropping just 1 leg in 6 matches (that one to Castaldo). Eddie secured 2nd while Flint and Will secured passage to the Cup.<br><br>\n<strong>Group B</strong> — the group of death? 5 of the 6 players had played A-team matches in recent years, but it was OPB showing his class, not dropping a game and beating Dennett, Thorpe and Clucas along the way. Thorpe bottled a 2-0 lead vs OPB and missed a match dart. Todd unlucky to finish 5th in a group with a lot of quality, one to watch in the Plate. Clucas snatched the crucial 4th spot.<br><br>\n<strong>Group C</strong> — not a single alumni in this group, all fresh-faced and keen to impress. Captain Morgan flexed his darting ability, not dropping a game — Truelove 2nd, only falling to Morgan. Hodgson and Brom made up the top 4.<br><br>\n<strong>Group D</strong> — the Connor Bowler show, fresh from his final last season and looking to go one better without losing a game, only dropping legs to Chesterfield native Will (King of the North). Joe and Wilson also played well enough to qualify.<br><br>\n<strong>Parson's Plate</strong> — the Quarters saw Alex Wright beat Jessie in a battle of the old guard, before Stewart, Haynes and Finley completed the semi-final line-up. Todd and Finley both showed why they were in the final, winning 8 legs between them and dropping just 1. In the final, Haynes finally got his Plate with an impressive display including 2 checkouts north of 90 — Finley played well on the day but Haynes looked unstoppable.<br><br>\n<strong>Handley Cup</strong><br>\nCastaldo 4-3 Thorpe, the crowd goes wild. Zodge pushed Dennett, and the rest of the fixtures were straightforward with group winners Marshall, OPB, Bowler and Morgan all set for the last 8.<br>\n<u>Quarters</u> — Truelove vs Castaldo looked wide open before a dart was thrown, but a semi-final on debut for \"TheOne\" after Dale's draw put all 4 group winners on the same side of the bracket. Marshall and OPB came out on top over Morgan and Bowler.<br>\n<u>Semis</u> — Flint 4-5 Marshall: the first match darts missed against Marshall since 2019, and by that man again, Jamie Flint. OPB played Truelove in a close contest, Oliver coming out on top.<br>\n<u>Final</u> — Marshall in a final... water is wet and grass is green, and Marshall lifts another Handley Cup.<br><br>\n<strong>The Sheet</strong><br>\n<u>180s</u> — Charlie Marshall 3, Bradley Truelove 1, Morgan Shillito 3, Connor Bowler 4, Fillip Brom 2, Will Ellis 2, Finley Sanderson 1, Oliver Burgess 3, Will North 1, Curtis Thorpe 1, Eddie Castaldo 1, Jamie Flint 1, Todd Haynes 1.<br>\n<u>High Outs</u> — Charlie Marshall 143, Connor Bowler 114 &amp; 138, Jamie Flint 108, Morgan Shillito 100, Curtis Thorpe 122, Will Ellis 110, Bradley Truelove 100 (x2), Oliver Burgess 110, Todd Haynes 118.<br>\n<u>21-or-under legs</u> — Charlie Marshall 14, 15, 17(x2), 18(x5), 19(x3), 20, 21(x3); Bradley Truelove 16, 17(x2), 19(x2), 20; Morgan Shillito 16, 17(x3), 18, 19, 20, 21; Eddie Castaldo 21, 20; Connor Bowler 18(x2); Oliver Burgess 15, 19(x6), 20; Fillip Brom 19; Dale Dennett 19, 20, 21(x2); Curtis Thorpe 17, 18(x2), 20(x2); Oliver Wilson 21; Will North 19, 21; Kelham Elliot 21; Nathan Stewart 20; Jamie Flint 19, 20(x3), 21.",
     "seasonSummary": "A new record 25 players enter as Charlie Marshall wins his 5th title, beating Oliver Burgess 6-2 in the final, while Todd Haynes finally gets his hands on the Parson's Plate after a 6-year wait."
   },
@@ -5200,15 +5173,14 @@ const EVENTS = {
           "winnerLegs": 6,
           "loserLegs": 0,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 6-0 Morgan Shillito",
-          "source": "Roll of Honour"
+          "scoreDisplay": "Charlie Marshall 6-0 Morgan Shillito"
         }
       ]
     },
     "plateBracket": {
-      "Last 32": [
+      "Last 24": [
         {
-          "round": "Last 32",
+          "round": "Last 24",
           "player1": "Hugo Nilsson",
           "player1Id": "hugo-nilsson",
           "player2": "Deck Ingber",
@@ -5223,7 +5195,7 @@ const EVENTS = {
           "scoreDisplay": "Hugo Nilsson 3-2 Deck Ingber"
         },
         {
-          "round": "Last 32",
+          "round": "Last 24",
           "player1": "Alex Botha",
           "player1Id": "alex-botha",
           "player2": "Tom Hodder",
@@ -5238,7 +5210,7 @@ const EVENTS = {
           "scoreDisplay": "Alex Botha 3-1 Tom Hodder"
         },
         {
-          "round": "Last 32",
+          "round": "Last 24",
           "player1": "Oliver Wilson",
           "player1Id": "oliver-wilson",
           "player2": "Joe Evans",
@@ -5253,7 +5225,7 @@ const EVENTS = {
           "scoreDisplay": "Oliver Wilson 3-1 Joe Evans"
         },
         {
-          "round": "Last 32",
+          "round": "Last 24",
           "player1": "Dan Harrison",
           "player1Id": "dan-harrison",
           "player2": "Ben Pellington",
@@ -5498,18 +5470,11 @@ const EVENTS = {
           "winnerLegs": 3,
           "loserLegs": 2,
           "scoreReconstructed": true,
-          "scoreDisplay": "Hugo Nilsson 3-2 Oliver Wilson",
-          "source": "Roll of Honour (sheet had no Final score)"
+          "scoreDisplay": "Hugo Nilsson 3-2 Oliver Wilson"
         }
       ]
     },
-    "conflicts": [
-      "Group F: the James Buckby vs Sam Taylor match was recorded as '1-F' rather than a normal leg score — confirmed as a forfeit win for Buckby.",
-      "Group F: that forfeit left Will Ellis, Dom Tofts and Dan Harrison tied on points with a head-to-head cycle (Tofts beat Harrison, Harrison beat Ellis, Ellis beat Tofts) — ranked by total leg difference (Ellis +6, Tofts +4, Harrison +2), confirmed as the correct tiebreak method.",
-      "Group F has 7 entrants rather than the usual 6 — confirmed intentional, not an error.",
-      "Parson's Plate Last 32 only had 4 of a possible 8 matches recorded — the rest of that round's Last 16 entrants appear to have had a bye straight through, kept as given.",
-      "Parson's Plate Final score wasn't in the supplied sheet — used Roll of Honour's score (3-2) and inferred the runner-up as Oliver Wilson, the other Semi-Final winner."
-    ],
+    "conflicts": [],
     "seasonRecap": "Grab a cup of tea, this is going to be a long read.<br><br>\nWe had a record-shattering <strong>37 players</strong> this year (previous record: 27), with <strong>9 debutants</strong>. 36 of those 37 went into the knockouts, 16 into the Handley Cup and the rest making up the Parson's Plate.<br><br>\n<strong>Game of the group stage:</strong> Daniel Rushton vs Joe Ellett, 3-2 to Joe with a combined average of 135.6 — both players hitting 180s, with a 14-darter followed by a 16 and then a 20. Unreal effort lads.<br><br>\n<strong>Honourable mentions:</strong> James Buckby beating Will Ellis 3-1 with both players averaging around 65; Dan Harrison rolling back the years to win 3-2 over Will Ellis; Brad Truelove's leg reading 180, 26, 180, 75, (40 in 1); Curtis banishing his demons from last year with a whitewash of Castaldo.<br><br>\n<strong>Highest averages through the day, by group:</strong><br>\nGroup A — Oliver Burgess, 87.94 in a 3-1 win over Dan Rushton<br>\nGroup B — Morgan Shillito, 65.22 in a 3-1 win over Eddie Castaldo<br>\nGroup C — Dale Dennett, 63.51 in a 3-0 win over Fillip Brom<br>\nGroup D — Charlie Marshall, 92.02 in a 3-0 win over Todd Haynes (the highest single average of the day)<br>\nGroup E — Bradley Truelove, 65.35 in a 3-0 win over Hugo Nilsson<br>\nGroup F — James Buckby, 81.98 in a 3-0 win over Luke McCormack<br>\nKnockouts — Charlie Marshall, 82.26 in a 5-3 win over Oliver Burgess<br>\nPlate — Dan Harrison, 60.12 in a 3-1 win over Zach Hodgson<br><br>\n<strong>Game of the entire day</strong> has to be Charlie Marshall (82.26) 5-3 Oliver Burgess (79.17) in the winners' semi-final — Curtis Thorpe 4-1 Eddie Castaldo gets an honourable mention too.<br><br>\n<strong>180s hit:</strong> 43! 10 each from Morgan and Charlie, with 10 unique players hitting a 180 on the day. We also had 3 players average over 70 for the day: Charlie Marshall, Oliver Burgess and Dan Rushton.<br><br>\n<strong>High checkout:</strong> 148 by Charlie Marshall (Dale also hit a 146, his highest visit of the day).<br><br>\n<strong>Notable quick legs:</strong> Morgan Shillito 15, Oliver Burgess 15, Charlie Marshall 15 (x3), Oliver Burgess 14, James Buckby 14, Dan Rushton 14, Joe Ellett 14, Brad Truelove 13, Oliver Burgess 13, Charlie Marshall 13, Dan Rushton 13, Charlie Marshall 12.<br><br>\n<strong>Lowest single-game average:</strong> 31.05.<br><br>\n<strong>Dark Horse:</strong> Dan Rushton &nbsp;·&nbsp; <strong>Underperformer:</strong> Jamie Flint<br><br>\nAnd finally, a massive well done — <strong>Winner</strong> (#BackToBackToBackToBackToBackToBackToBackToBackToBackToBackToBack): Charlie Marshall. <strong>Runner-up:</strong> Morgan Shillito. <strong>Parson's Plate Winner:</strong> Hugo Nilsson.",
     "seasonSummary": "A record 37 players enter as Charlie Marshall beats Morgan Shillito 6-0 in the final for his 6th title, with Hugo Nilsson taking the Plate."
   },
@@ -7452,11 +7417,7 @@ const EVENTS = {
         }
       ]
     },
-    "conflicts": [
-      "Group standings were cross-checked win-for-win against fixture-level data supplied afterward — every group matched exactly, so the original standings order (already correctly tie-broken by leg difference) has been kept as-is.",
-      "Parson's Plate Last 24 only had 7 of a possible 8 matches recorded — 9 Last 16 entrants had a bye straight through, consistent with the pattern seen in 24/25.",
-      "Handley Cup Final (Marshall 7-4 Burgess) matches the existing Roll of Honour record exactly."
-    ],
+    "conflicts": [],
     "seasonRecap": "<strong>161 games played total!</strong> Here are some of the highlights.<br><br>\n<strong>180s hit:</strong> a whopping 52 180s hit! 20 of the 47 players hit a max on the day, with the top 3 being Charlie (12), Morgan (7) and James (6).<br><br>\n<strong>Ton Plus Outs:</strong> 12 players hit a ton-plus out! Highest was Mr Rushton with a 130 effort, Hodder in 2nd with a 124 on the bull, and Hugo 3rd with a 118.<br><br>\n<strong>Dark Horses:</strong> impossible to pick just one, so shoutouts to Jono Downing, Josh Longden and Billy Bennett for all making it to the Last 16; birthday boy Dom Tofts for reaching the semi-final (\"I haven't averaged 60 all day\"); and Reuben Evans for reaching the Plate final.<br><br>\n<strong>Underperformers:</strong> Connor Bowler and Zach Hodgson, for picking a trip to the Cotswolds/Romania over the Handley Cup.<br><br>\n<strong>Games of the Groups</strong><br>\n<u>Group A</u> — Clucas rolling back the years in a 3-0 whitewash of Plate finalist Reuben, life in the old dog yet. Jono coming from 2-0 down to beat Clucas 3-2, stones.<br>\n<u>Group B</u> — Josh and Blake battled it out in a family affair, Josh coming out the victor. Josh also with an impressive win over Chris Ward with a 65+ average.<br>\n<u>Group C</u> — Jamie Flint 3-2 Callum Woodcock: despite starting with a 19 and a 21-darter, Flint followed with a 29.8-scoring leg to leave 203 after 28 darts. Ingber also beat Jamie 3-1 to reclaim the title of Donny's number 2. Woodcock hit a 60 average in 3 of his 5 games, good form heading into the varsity qualifiers.<br>\n<u>Group D</u> — the first ever all-female clash at the Handley Cup after 8 years, Jessie Sale beat Caitlin Cope. Marshall's 3-0 win with an 85 average was the highest of the group stage — boring.<br>\n<u>Group E</u> — shithouse central: Dennett came back from 2-0 down to beat Wilson 3-2, Wilson missing more than a few match darts. Truelove laid down a marker with a 3-0 over Hodder on a 67.30 average.<br>\n<u>Group F</u> — the group of death, 4 of the 6 players inside the top 8 running averages going into the KOs. Curtis Thorpe (61.67) beat Eddie Castaldo (60.51) 3-1. Eddie averaged 80.52 in a whitewash of Dan Harrison. Will North found form again, not dropping a game in a group of Harrison, Thorpe, Buckby, Castaldo and Nottingham.<br>\n<u>Group G</u> — OPB didn't drop a game, only 2 legs in the groups, to Tofts and Haynes. Haynes and Bennett fought a tight contest for the last KO spot, settled with a 26-darter on throw.<br>\n<u>Group H</u> — Kel did ask \"why the fuck is Dan Burton above me in the rankings\" — Burton took the spoils in a classic 3-2. Game of the Groups: Dan Rushton (76.79) beat Morgan Shillito (82.70) 3-2.<br><br>\n<strong>Parson's Plate</strong><br>\nShoutout to Kel and Caitlin for their 3-2 game taking only 55 minutes. Game of the Plate was the quarter-final between Castaldo and Woodcock — no leg over 24 darts, both averaging north of 60, Eddie taking the tie 4-1. Harrison now with back-to-back Plate semi-finals, one day mate. Shoutout debutant Reuben for reaching the final, but no one was stopping the winner today: Eddie Castaldo, dropping just 2 legs including a 72.54 average in the final, the 5th highest average of the day.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Last 24</u> — Billy Bennett came back from 3-1 down to beat Deck Ingber and book his place in the Last 16, sealing it with a 20-darter. A battle of the old guard saw Dom topple Flint 4-3 despite a 39-dart leg from Flint to force a decider.<br>\n<u>Last 16</u> — 4-3 was the most common scoreline, with heart-breaking last legs for Thorpe, Dennett, Josh and Jono. Marshall showed why he's still the man to beat, with finishes of 72, 32, 107 and 116 to beat Buckby, who averaged 88.26 — brutal draw to say the least.<br>\n<u>Quarters</u> — Bradley Truelove stormed to a 4-3 lead with back-to-back 16-darters, daring to dream — Charlie showed his class with a 14 to hold and an 18 to break to seal the win. Shillito, Rushton and North all fell at the quarter-final stage.<br>\n<u>Semis</u> — two 6-1 victories for OPB and Chaz over debutant Louis Bell and birthday boy (34 years old) Dom Tofts.<br><br>\n<strong>The Final</strong><br>\nWhat a classic — maybe the best game in Handley Cup history, if you don't count the hat-trick of wins Thorpe boasts over Castaldo. The Fire and OPB served up a classic, with the first 5 legs going 14, 14, 13, 17, 17. Both players refused to buckle, locked at 4-4 with 8 holds of throw — but once again, like Taylor at the Matchplay, Marshall found another level, holding in 21 before breaking in 16 and clinching his 7th Handley Cup with a 17-darter on double 1, leaving 81 after just 9 darts. Game shot and the match — Charlie Marshall becomes the BackToBackToBackToBackToBackToBackToBack Handley Cup 2026 Champion.",
     "seasonSummary": "Charlie Marshall wins a 7-4 classic over Oliver Burgess for his 7th straight Handley Cup, while Eddie Castaldo claims the Parson's Plate — 161 games and 52 180s across a record 47-player field."
   }
