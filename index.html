@@ -140,7 +140,7 @@
       <a class="home-nav-card" href="events.html">
         <div class="home-nav-icon">🎯</div>
         <div class="home-nav-title">Events</div>
-        <div class="home-nav-desc">Group stages and knockout brackets — 18/19 through 21/22 so far, more added as they arrive.</div>
+        <div class="home-nav-desc">Group stages and knockout brackets — every season from 18/19 to 25/26.</div>
       </a>
       <a class="home-nav-card" href="groups.html">
         <div class="home-nav-icon">🧮</div>
@@ -174,7 +174,7 @@
       where everyone from Hallam Darts, past, present and honorary, comes together for one day a year to drink,
       chat, play darts, and then watch Charlie Marshall win it.
       <br><br>
-      Nine years ago the idea was spawned from Curtis Thorpe wanting Hallam Darts to have something to look
+      Eight years ago the idea was spawned from Curtis Thorpe wanting Hallam Darts to have something to look
       forward to other than the Varsity hammering from our Steel City rivals — something for every Hallam player
       to play in and enjoy, and something to come back to after graduating, to see everyone that makes Hallam
       Darts what it is. It's only getting bigger and better, with the society going from strength to strength and
@@ -268,11 +268,11 @@
     document.getElementById('reigningBoard').innerHTML = `
       <div class="reigning-card">
         ${championCardHtml(latest.winner, '🏆 Handley Cup', 'roh-champion-name')}
-        <div class="roh-sub">beat ${nameHtml(latest.runnerUp)}, ${latest.finalScore || ''}${latest.finalScoreReconstructed ? '*' : ''}</div>
+        <div class="roh-sub">beat ${nameHtml(latest.runnerUp)}, ${latest.finalScore || ''}</div>
       </div>
       <div class="reigning-card">
         ${latest.plateWinner
-          ? championCardHtml(latest.plateWinner, "🏅 Parson's Plate", 'roh-plate-name') + `<div class="roh-sub">${latest.plateScore ? `Final score ${latest.plateScore}${latest.plateScoreReconstructed ? '*' : ''}` : ''}</div>`
+          ? championCardHtml(latest.plateWinner, "🏅 Parson's Plate", 'roh-plate-name') + `<div class="roh-sub">${latest.plateScore ? `Final score ${latest.plateScore}` : ''}</div>`
           : `<div class="roh-label">🏅 Parson's Plate</div><div class="roh-plate-name">—</div>`}
       </div>
     `;

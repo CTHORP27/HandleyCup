@@ -268,12 +268,12 @@
         <div class="reigning-card">
           <div class="roh-label">🏆 Handley Cup Champion</div>
           <div class="roh-champion-name">${nameHtml(latest.winner)}</div>
-          <div class="roh-sub">beat ${nameHtml(latest.runnerUp)}, ${latest.finalScore || ''}${latest.finalScoreReconstructed ? '*' : ''}</div>
+          <div class="roh-sub">beat ${nameHtml(latest.runnerUp)}, ${latest.finalScore || ''}</div>
         </div>
         <div class="reigning-card">
           <div class="roh-label">🏅 Parson's Plate Champion</div>
           <div class="roh-plate-name">${latest.plateWinner ? nameHtml(latest.plateWinner) : '—'}</div>
-          <div class="roh-sub">${latest.plateScore ? `Final score ${latest.plateScore}${latest.plateScoreReconstructed ? '*' : ''}` : ''}</div>
+          <div class="roh-sub">${latest.plateScore ? `Final score ${latest.plateScore}` : ''}</div>
         </div>
       </div>
       ${latestEvent && latestEvent.seasonSummary ? `<div class="recap-summary" style="max-width:720px; margin:20px auto 0;">${latestEvent.seasonSummary}</div>` : ''}

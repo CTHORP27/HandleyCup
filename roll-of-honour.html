@@ -198,8 +198,8 @@
     const yearsDesc = [...ROLL_OF_HONOUR].reverse();
 
     rohList.innerHTML = yearsDesc.map(y => {
-      const finalScoreHtml = y.finalScore ? `${y.finalScore}${y.finalScoreReconstructed ? '*' : ''}` : '—';
-      const plateScoreHtml = y.plateScore ? `${y.plateScore}${y.plateScoreReconstructed ? '*' : ''}` : '—';
+      const finalScoreHtml = y.finalScore ? `${y.finalScore}` : '—';
+      const plateScoreHtml = y.plateScore ? `${y.plateScore}` : '—';
       const titleBadge = y.winner.titleNumber ? `<span class="title-badge">${ordinal(y.winner.titleNumber)} title</span>` : '';
 
       return `

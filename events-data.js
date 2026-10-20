@@ -1668,7 +1668,7 @@ const EVENTS = {
           "score1": 3,
           "player2": "Jessie Sale",
           "player2Id": "jessie-sale",
-          "score2": 1
+          "score2": 0
         },
         {
           "player1": "Charlie Marshall",
@@ -1676,7 +1676,7 @@ const EVENTS = {
           "score1": 3,
           "player2": "Curtis Thorpe",
           "player2Id": "curtis-thorpe",
-          "score2": 1
+          "score2": 0
         },
         {
           "player1": "Charlie Marshall",
@@ -1684,7 +1684,7 @@ const EVENTS = {
           "score1": 3,
           "player2": "Cam Thorpe",
           "player2Id": "cam-thorpe",
-          "score2": 1
+          "score2": 0
         },
         {
           "player1": "Curtis Thorpe",

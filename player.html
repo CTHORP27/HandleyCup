@@ -240,7 +240,7 @@
           <td>${compTagHtml(t.competition)}</td>
           <td><span class="result-pill ${t.result === 'Winner' ? 'result-win' : 'result-other'}">${t.result}</span></td>
           <td class="opponent">${t.opponentName ? opponentHtml(t.opponentId, t.opponentName) : '—'}</td>
-          <td class="score">${t.score ? t.score + (t.scoreReconstructed ? '*' : '') : '—'}</td>
+          <td class="score">${t.score ? t.score : '—'}</td>
         </tr>`).join('');
 
       const avgValueHtml = player.highestAverage ? player.highestAverage.value.toFixed(2) : '—';
@@ -311,7 +311,7 @@
           <div class="section-heading collapsible" data-collapse-target="timelineWrap">Season Results<span class="collapse-arrow">▾</span></div>
           <div class="timeline-wrap" id="timelineWrap">
             <table class="timeline">
-              <caption>Season by season. Scores marked * were recovered from a spreadsheet formatting issue — worth a spot check where you can.</caption>
+              <caption>Season by season.</caption>
               <thead>
                 <tr>
                   <th>Year</th>
