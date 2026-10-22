@@ -1419,7 +1419,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Quarter-Final" },
     nickname: "Hotwheels",
-    writeup: `Hotwheels is a man in infamy but to the older lads at Hallam the drink tales are legendary, the darts...not so much (Curtis definitely pushed him down the stairs in Corp)`,
+    writeup: `Hotwheels is a man of infamy — to the older lads at Hallam the drink tales are legendary, the darts... not so much (Curtis definitely pushed him down the stairs in Corp)`,
     highestAverage: null,
     oneEighties: null,
     quickestLeg: null,
