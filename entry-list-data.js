@@ -190,7 +190,7 @@ const ENTRY_LIST = {
         { name: "Alex Botha", id: "alex-botha", appearanceNumber: 1 },
         { name: "Tom Hodder", id: "tom-hodder", appearanceNumber: 1 },
         { name: "Ben Pellington", id: "ben-pellington", appearanceNumber: 1 },
-        { name: "Lewis Ruston", id: "lewis-ruston", appearanceNumber: 1 },
+        { name: "Lewis Rushton", id: "lewis-ruston", appearanceNumber: 1 },
       ]
     },
     {

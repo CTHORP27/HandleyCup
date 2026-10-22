@@ -82,7 +82,7 @@ const POWER_RANKINGS = [
   { rank: 62, id: "billy-bennett", name: "Billy Bennett", nickname: "Triple B", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Last 16" } },
   { rank: 63, id: "chris-ward", name: "Chris Ward", nickname: "The Warden", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 24" } },
   { rank: 64, id: "alex-botha", name: "Alex Botha", nickname: "Box Office", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },
-  { rank: 65, id: "lewis-ruston", name: "Lewis Ruston", nickname: "Stumpy", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },
+  { rank: 65, id: "lewis-ruston", name: "Lewis Rushton", nickname: "Stumpy", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },
   { rank: 66, id: "alex-mccowen", name: "Alex McCowen", nickname: "Pay 2 Win", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 67, id: "sam-taylor", name: "Sam Taylor", nickname: "Tism", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Walkover" } },
   { rank: 68, id: "tom-khan", name: "Tom Khan", nickname: "Trebleless", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },

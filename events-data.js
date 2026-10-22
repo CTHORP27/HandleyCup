@@ -3826,16 +3826,16 @@ const EVENTS = {
           "round": "Quarter-Final",
           "player1": "Nathan Stewart",
           "player1Id": "nathan-stewart",
-          "player2": "Kelham Elliott",
+          "player2": "Kelham Elliot",
           "player2Id": "kelham-elliot",
           "winner": "Nathan Stewart",
           "winnerId": "nathan-stewart",
-          "loser": "Kelham Elliott",
+          "loser": "Kelham Elliot",
           "loserId": "kelham-elliot",
           "winnerLegs": 3,
           "loserLegs": 1,
           "scoreReconstructed": true,
-          "scoreDisplay": "Nathan Stewart 3-1 Kelham Elliott"
+          "scoreDisplay": "Nathan Stewart 3-1 Kelham Elliot"
         },
         {
           "round": "Quarter-Final",
@@ -3957,7 +3957,7 @@ const EVENTS = {
           "points": 4
         },
         {
-          "name": "Lewis Ruston",
+          "name": "Lewis Rushton",
           "id": "lewis-ruston",
           "played": 5,
           "points": 0
@@ -4174,7 +4174,7 @@ const EVENTS = {
           "player1": "Joe Ellett",
           "player1Id": "joe-ellett",
           "score1": 3,
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "score2": 0
         },
@@ -4206,7 +4206,7 @@ const EVENTS = {
           "player1": "Deck Ingber",
           "player1Id": "deck-ingber",
           "score1": 3,
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "score2": 0
         },
@@ -4230,7 +4230,7 @@ const EVENTS = {
           "player1": "Oliver Burgess",
           "player1Id": "oliver-burgess",
           "score1": 3,
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "score2": 0
         },
@@ -4254,7 +4254,7 @@ const EVENTS = {
           "player1": "Dan Rushton",
           "player1Id": "dan-rushton",
           "score1": 3,
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "score2": 0
         },
@@ -4270,7 +4270,7 @@ const EVENTS = {
           "player1": "Oliver Wilson",
           "player1Id": "oliver-wilson",
           "score1": 3,
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "score2": 1
         },
@@ -5305,16 +5305,16 @@ const EVENTS = {
           "round": "Last 16",
           "player1": "Oliver Wilson",
           "player1Id": "oliver-wilson",
-          "player2": "Lewis Ruston",
+          "player2": "Lewis Rushton",
           "player2Id": "lewis-ruston",
           "winner": "Oliver Wilson",
           "winnerId": "oliver-wilson",
-          "loser": "Lewis Ruston",
+          "loser": "Lewis Rushton",
           "loserId": "lewis-ruston",
           "winnerLegs": 3,
           "loserLegs": 0,
           "scoreReconstructed": false,
-          "scoreDisplay": "Oliver Wilson 3-0 Lewis Ruston"
+          "scoreDisplay": "Oliver Wilson 3-0 Lewis Rushton"
         },
         {
           "round": "Last 16",
@@ -5621,7 +5621,7 @@ const EVENTS = {
           "points": 4
         },
         {
-          "name": "Caitlin Cope",
+          "name": "Catlin Cope",
           "id": "catlin-cope",
           "played": 5,
           "points": 0
@@ -5711,7 +5711,7 @@ const EVENTS = {
           "points": 10
         },
         {
-          "name": "Dominic Tofts",
+          "name": "Dom Tofts",
           "id": "dom-tofts",
           "played": 5,
           "points": 6
@@ -5723,7 +5723,7 @@ const EVENTS = {
           "points": 6
         },
         {
-          "name": "Mat Davies",
+          "name": "Matt Davies",
           "id": "matt-davies",
           "played": 5,
           "points": 6
@@ -6112,7 +6112,7 @@ const EVENTS = {
           "player1": "Charlie Marshall",
           "player1Id": "charlie-marshall",
           "score1": 3,
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "score2": 0
         },
@@ -6120,7 +6120,7 @@ const EVENTS = {
           "player1": "Olly Doherty",
           "player1Id": "olly-doherty",
           "score1": 3,
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "score2": 0
         },
@@ -6144,7 +6144,7 @@ const EVENTS = {
           "player1": "Hedley-Paul Keegan",
           "player1Id": "hedley-paul-keegan",
           "score1": 3,
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "score2": 0
         },
@@ -6184,7 +6184,7 @@ const EVENTS = {
           "player1": "Jack Whiteley",
           "player1Id": "jack-whiteley",
           "score1": 3,
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "score2": 0
         },
@@ -6208,7 +6208,7 @@ const EVENTS = {
           "player1": "Jessie Sale",
           "player1Id": "jessie-sale",
           "score1": 3,
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "score2": 0
         },
@@ -6478,7 +6478,7 @@ const EVENTS = {
           "player1": "Oliver Burgess",
           "player1Id": "oliver-burgess",
           "score1": 3,
-          "player2": "Mat Davies",
+          "player2": "Matt Davies",
           "player2Id": "matt-davies",
           "score2": 0
         },
@@ -6491,10 +6491,10 @@ const EVENTS = {
           "score2": 0
         },
         {
-          "player1": "Mat Davies",
+          "player1": "Matt Davies",
           "player1Id": "matt-davies",
           "score1": 3,
-          "player2": "Dominic Tofts",
+          "player2": "Dom Tofts",
           "player2Id": "dom-tofts",
           "score2": 1
         },
@@ -6510,12 +6510,12 @@ const EVENTS = {
           "player1": "Oliver Burgess",
           "player1Id": "oliver-burgess",
           "score1": 3,
-          "player2": "Dominic Tofts",
+          "player2": "Dom Tofts",
           "player2Id": "dom-tofts",
           "score2": 1
         },
         {
-          "player1": "Mat Davies",
+          "player1": "Matt Davies",
           "player1Id": "matt-davies",
           "score1": 3,
           "player2": "Todd Haynes",
@@ -6539,7 +6539,7 @@ const EVENTS = {
           "score2": 2
         },
         {
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "score1": 3,
           "player2": "Will Burgess",
@@ -6555,7 +6555,7 @@ const EVENTS = {
           "score2": 1
         },
         {
-          "player1": "Mat Davies",
+          "player1": "Matt Davies",
           "player1Id": "matt-davies",
           "score1": 3,
           "player2": "Will Burgess",
@@ -6563,7 +6563,7 @@ const EVENTS = {
           "score2": 1
         },
         {
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "score1": 3,
           "player2": "Billy Bennett",
@@ -6582,12 +6582,12 @@ const EVENTS = {
           "player1": "Billy Bennett",
           "player1Id": "billy-bennett",
           "score1": 3,
-          "player2": "Mat Davies",
+          "player2": "Matt Davies",
           "player2Id": "matt-davies",
           "score2": 0
         },
         {
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "score1": 3,
           "player2": "Todd Haynes",
@@ -6752,18 +6752,18 @@ const EVENTS = {
         },
         {
           "round": "Last 24",
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "player2": "Jamie Flint",
           "player2Id": "jamie-flint",
-          "winner": "Dominic Tofts",
+          "winner": "Dom Tofts",
           "winnerId": "dom-tofts",
           "loser": "Jamie Flint",
           "loserId": "jamie-flint",
           "winnerLegs": 4,
           "loserLegs": 3,
           "scoreReconstructed": false,
-          "scoreDisplay": "Dominic Tofts 4-3 Jamie Flint"
+          "scoreDisplay": "Dom Tofts 4-3 Jamie Flint"
         },
         {
           "round": "Last 24",
@@ -6874,18 +6874,18 @@ const EVENTS = {
         },
         {
           "round": "Last 16",
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "player2": "Jono Downing",
           "player2Id": "jono-downing",
-          "winner": "Dominic Tofts",
+          "winner": "Dom Tofts",
           "winnerId": "dom-tofts",
           "loser": "Jono Downing",
           "loserId": "jono-downing",
           "winnerLegs": 4,
           "loserLegs": 3,
           "scoreReconstructed": false,
-          "scoreDisplay": "Dominic Tofts 4-3 Jono Downing"
+          "scoreDisplay": "Dom Tofts 4-3 Jono Downing"
         },
         {
           "round": "Last 16",
@@ -6981,18 +6981,18 @@ const EVENTS = {
         },
         {
           "round": "Quarter-Final",
-          "player1": "Dominic Tofts",
+          "player1": "Dom Tofts",
           "player1Id": "dom-tofts",
           "player2": "Dan Rushton",
           "player2Id": "dan-rushton",
-          "winner": "Dominic Tofts",
+          "winner": "Dom Tofts",
           "winnerId": "dom-tofts",
           "loser": "Dan Rushton",
           "loserId": "dan-rushton",
           "winnerLegs": 5,
           "loserLegs": 3,
           "scoreReconstructed": false,
-          "scoreDisplay": "Dominic Tofts 5-3 Dan Rushton"
+          "scoreDisplay": "Dom Tofts 5-3 Dan Rushton"
         },
         {
           "round": "Quarter-Final",
@@ -7030,16 +7030,16 @@ const EVENTS = {
           "round": "Semi-Final",
           "player1": "Charlie Marshall",
           "player1Id": "charlie-marshall",
-          "player2": "Dominic Tofts",
+          "player2": "Dom Tofts",
           "player2Id": "dom-tofts",
           "winner": "Charlie Marshall",
           "winnerId": "charlie-marshall",
-          "loser": "Dominic Tofts",
+          "loser": "Dom Tofts",
           "loserId": "dom-tofts",
           "winnerLegs": 6,
           "loserLegs": 1,
           "scoreReconstructed": false,
-          "scoreDisplay": "Charlie Marshall 6-1 Dominic Tofts"
+          "scoreDisplay": "Charlie Marshall 6-1 Dom Tofts"
         },
         {
           "round": "Semi-Final",
@@ -7111,16 +7111,16 @@ const EVENTS = {
           "round": "Last 24",
           "player1": "Kelham Elliot",
           "player1Id": "kelham-elliot",
-          "player2": "Caitlin Cope",
+          "player2": "Catlin Cope",
           "player2Id": "catlin-cope",
           "winner": "Kelham Elliot",
           "winnerId": "kelham-elliot",
-          "loser": "Caitlin Cope",
+          "loser": "Catlin Cope",
           "loserId": "catlin-cope",
           "winnerLegs": 3,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Kelham Elliot 3-2 Caitlin Cope"
+          "scoreDisplay": "Kelham Elliot 3-2 Catlin Cope"
         },
         {
           "round": "Last 24",
@@ -7231,18 +7231,18 @@ const EVENTS = {
         },
         {
           "round": "Last 16",
-          "player1": "Mat Davies",
+          "player1": "Matt Davies",
           "player1Id": "matt-davies",
           "player2": "Finley Nottingham",
           "player2Id": "finley-nottingham",
-          "winner": "Mat Davies",
+          "winner": "Matt Davies",
           "winnerId": "matt-davies",
           "loser": "Finley Nottingham",
           "loserId": "finley-nottingham",
           "winnerLegs": 3,
           "loserLegs": 0,
           "scoreReconstructed": false,
-          "scoreDisplay": "Mat Davies 3-0 Finley Nottingham"
+          "scoreDisplay": "Matt Davies 3-0 Finley Nottingham"
         },
         {
           "round": "Last 16",
@@ -7325,16 +7325,16 @@ const EVENTS = {
           "round": "Quarter-Final",
           "player1": "Dereece O'Hara",
           "player1Id": "dereece-ohara",
-          "player2": "Mat Davies",
+          "player2": "Matt Davies",
           "player2Id": "matt-davies",
           "winner": "Dereece O'Hara",
           "winnerId": "dereece-ohara",
-          "loser": "Mat Davies",
+          "loser": "Matt Davies",
           "loserId": "matt-davies",
           "winnerLegs": 4,
           "loserLegs": 2,
           "scoreReconstructed": false,
-          "scoreDisplay": "Dereece O'Hara 4-2 Mat Davies"
+          "scoreDisplay": "Dereece O'Hara 4-2 Matt Davies"
         },
         {
           "round": "Quarter-Final",
@@ -7418,7 +7418,7 @@ const EVENTS = {
       ]
     },
     "conflicts": [],
-    "seasonRecap": "<strong>161 games played total!</strong> Here are some of the highlights.<br><br>\n<strong>180s hit:</strong> a whopping 52 180s hit! 20 of the 47 players hit a max on the day, with the top 3 being Charlie (12), Morgan (7) and James (6).<br><br>\n<strong>Ton Plus Outs:</strong> 12 players hit a ton-plus out! Highest was Mr Rushton with a 130 effort, Hodder in 2nd with a 124 on the bull, and Hugo 3rd with a 118.<br><br>\n<strong>Dark Horses:</strong> impossible to pick just one, so shoutouts to Jono Downing, Josh Longden and Billy Bennett for all making it to the Last 16; birthday boy Dom Tofts for reaching the semi-final (\"I haven't averaged 60 all day\"); and Reuben Evans for reaching the Plate final.<br><br>\n<strong>Underperformers:</strong> Connor Bowler and Zach Hodgson, for picking a trip to the Cotswolds/Romania over the Handley Cup.<br><br>\n<strong>Games of the Groups</strong><br>\n<u>Group A</u> — Clucas rolling back the years in a 3-0 whitewash of Plate finalist Reuben, life in the old dog yet. Jono coming from 2-0 down to beat Clucas 3-2, stones.<br>\n<u>Group B</u> — Josh and Blake battled it out in a family affair, Josh coming out the victor. Josh also with an impressive win over Chris Ward with a 65+ average.<br>\n<u>Group C</u> — Jamie Flint 3-2 Callum Woodcock: despite starting with a 19 and a 21-darter, Flint followed with a 29.8-scoring leg to leave 203 after 28 darts. Ingber also beat Jamie 3-1 to reclaim the title of Donny's number 2. Woodcock hit a 60 average in 3 of his 5 games, good form heading into the varsity qualifiers.<br>\n<u>Group D</u> — the first ever all-female clash at the Handley Cup after 8 years, Jessie Sale beat Caitlin Cope. Marshall's 3-0 win with an 85 average was the highest of the group stage — boring.<br>\n<u>Group E</u> — shithouse central: Dennett came back from 2-0 down to beat Wilson 3-2, Wilson missing more than a few match darts. Truelove laid down a marker with a 3-0 over Hodder on a 67.30 average.<br>\n<u>Group F</u> — the group of death, 4 of the 6 players inside the top 8 running averages going into the KOs. Curtis Thorpe (61.67) beat Eddie Castaldo (60.51) 3-1. Eddie averaged 80.52 in a whitewash of Dan Harrison. Will North found form again, not dropping a game in a group of Harrison, Thorpe, Buckby, Castaldo and Nottingham.<br>\n<u>Group G</u> — OPB didn't drop a game, only 2 legs in the groups, to Tofts and Haynes. Haynes and Bennett fought a tight contest for the last KO spot, settled with a 26-darter on throw.<br>\n<u>Group H</u> — Kel did ask \"why the fuck is Dan Burton above me in the rankings\" — Burton took the spoils in a classic 3-2. Game of the Groups: Dan Rushton (76.79) beat Morgan Shillito (82.70) 3-2.<br><br>\n<strong>Parson's Plate</strong><br>\nShoutout to Kel and Caitlin for their 3-2 game taking only 55 minutes. Game of the Plate was the quarter-final between Castaldo and Woodcock — no leg over 24 darts, both averaging north of 60, Eddie taking the tie 4-1. Harrison now with back-to-back Plate semi-finals, one day mate. Shoutout debutant Reuben for reaching the final, but no one was stopping the winner today: Eddie Castaldo, dropping just 2 legs including a 72.54 average in the final, the 5th highest average of the day.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Last 24</u> — Billy Bennett came back from 3-1 down to beat Deck Ingber and book his place in the Last 16, sealing it with a 20-darter. A battle of the old guard saw Dom topple Flint 4-3 despite a 39-dart leg from Flint to force a decider.<br>\n<u>Last 16</u> — 4-3 was the most common scoreline, with heart-breaking last legs for Thorpe, Dennett, Josh and Jono. Marshall showed why he's still the man to beat, with finishes of 72, 32, 107 and 116 to beat Buckby, who averaged 88.26 — brutal draw to say the least.<br>\n<u>Quarters</u> — Bradley Truelove stormed to a 4-3 lead with back-to-back 16-darters, daring to dream — Charlie showed his class with a 14 to hold and an 18 to break to seal the win. Shillito, Rushton and North all fell at the quarter-final stage.<br>\n<u>Semis</u> — two 6-1 victories for OPB and Chaz over debutant Louis Bell and birthday boy (34 years old) Dom Tofts.<br><br>\n<strong>The Final</strong><br>\nWhat a classic — maybe the best game in Handley Cup history, if you don't count the hat-trick of wins Thorpe boasts over Castaldo. The Fire and OPB served up a classic, with the first 5 legs going 14, 14, 13, 17, 17. Both players refused to buckle, locked at 4-4 with 8 holds of throw — but once again, like Taylor at the Matchplay, Marshall found another level, holding in 21 before breaking in 16 and clinching his 7th Handley Cup with a 17-darter on double 1, leaving 81 after just 9 darts. Game shot and the match — Charlie Marshall becomes the BackToBackToBackToBackToBackToBackToBack Handley Cup 2026 Champion.",
+    "seasonRecap": "<strong>161 games played total!</strong> Here are some of the highlights.<br><br>\n<strong>180s hit:</strong> a whopping 52 180s hit! 20 of the 47 players hit a max on the day, with the top 3 being Charlie (12), Morgan (7) and James (6).<br><br>\n<strong>Ton Plus Outs:</strong> 12 players hit a ton-plus out! Highest was Mr Rushton with a 130 effort, Hodder in 2nd with a 124 on the bull, and Hugo 3rd with a 118.<br><br>\n<strong>Dark Horses:</strong> impossible to pick just one, so shoutouts to Jono Downing, Josh Longden and Billy Bennett for all making it to the Last 16; birthday boy Dom Tofts for reaching the semi-final (\"I haven't averaged 60 all day\"); and Reuben Evans for reaching the Plate final.<br><br>\n<strong>Underperformers:</strong> Connor Bowler and Zach Hodgson, for picking a trip to the Cotswolds/Romania over the Handley Cup.<br><br>\n<strong>Games of the Groups</strong><br>\n<u>Group A</u> — Clucas rolling back the years in a 3-0 whitewash of Plate finalist Reuben, life in the old dog yet. Jono coming from 2-0 down to beat Clucas 3-2, stones.<br>\n<u>Group B</u> — Josh and Blake battled it out in a family affair, Josh coming out the victor. Josh also with an impressive win over Chris Ward with a 65+ average.<br>\n<u>Group C</u> — Jamie Flint 3-2 Callum Woodcock: despite starting with a 19 and a 21-darter, Flint followed with a 29.8-scoring leg to leave 203 after 28 darts. Ingber also beat Jamie 3-1 to reclaim the title of Donny's number 2. Woodcock hit a 60 average in 3 of his 5 games, good form heading into the varsity qualifiers.<br>\n<u>Group D</u> — the first ever all-female clash at the Handley Cup after 8 years, Jessie Sale beat Catlin Cope. Marshall's 3-0 win with an 85 average was the highest of the group stage — boring.<br>\n<u>Group E</u> — shithouse central: Dennett came back from 2-0 down to beat Wilson 3-2, Wilson missing more than a few match darts. Truelove laid down a marker with a 3-0 over Hodder on a 67.30 average.<br>\n<u>Group F</u> — the group of death, 4 of the 6 players inside the top 8 running averages going into the KOs. Curtis Thorpe (61.67) beat Eddie Castaldo (60.51) 3-1. Eddie averaged 80.52 in a whitewash of Dan Harrison. Will North found form again, not dropping a game in a group of Harrison, Thorpe, Buckby, Castaldo and Nottingham.<br>\n<u>Group G</u> — OPB didn't drop a game, only 2 legs in the groups, to Tofts and Haynes. Haynes and Bennett fought a tight contest for the last KO spot, settled with a 26-darter on throw.<br>\n<u>Group H</u> — Kel did ask \"why the fuck is Dan Burton above me in the rankings\" — Burton took the spoils in a classic 3-2. Game of the Groups: Dan Rushton (76.79) beat Morgan Shillito (82.70) 3-2.<br><br>\n<strong>Parson's Plate</strong><br>\nShoutout to Kel and Caitlin for their 3-2 game taking only 55 minutes. Game of the Plate was the quarter-final between Castaldo and Woodcock — no leg over 24 darts, both averaging north of 60, Eddie taking the tie 4-1. Harrison now with back-to-back Plate semi-finals, one day mate. Shoutout debutant Reuben for reaching the final, but no one was stopping the winner today: Eddie Castaldo, dropping just 2 legs including a 72.54 average in the final, the 5th highest average of the day.<br><br>\n<strong>Handley Cup</strong><br>\n<u>Last 24</u> — Billy Bennett came back from 3-1 down to beat Deck Ingber and book his place in the Last 16, sealing it with a 20-darter. A battle of the old guard saw Dom topple Flint 4-3 despite a 39-dart leg from Flint to force a decider.<br>\n<u>Last 16</u> — 4-3 was the most common scoreline, with heart-breaking last legs for Thorpe, Dennett, Josh and Jono. Marshall showed why he's still the man to beat, with finishes of 72, 32, 107 and 116 to beat Buckby, who averaged 88.26 — brutal draw to say the least.<br>\n<u>Quarters</u> — Bradley Truelove stormed to a 4-3 lead with back-to-back 16-darters, daring to dream — Charlie showed his class with a 14 to hold and an 18 to break to seal the win. Shillito, Rushton and North all fell at the quarter-final stage.<br>\n<u>Semis</u> — two 6-1 victories for OPB and Chaz over debutant Louis Bell and birthday boy (34 years old) Dom Tofts.<br><br>\n<strong>The Final</strong><br>\nWhat a classic — maybe the best game in Handley Cup history, if you don't count the hat-trick of wins Thorpe boasts over Castaldo. The Fire and OPB served up a classic, with the first 5 legs going 14, 14, 13, 17, 17. Both players refused to buckle, locked at 4-4 with 8 holds of throw — but once again, like Taylor at the Matchplay, Marshall found another level, holding in 21 before breaking in 16 and clinching his 7th Handley Cup with a 17-darter on double 1, leaving 81 after just 9 darts. Game shot and the match — Charlie Marshall becomes the BackToBackToBackToBackToBackToBackToBack Handley Cup 2026 Champion.",
     "seasonSummary": "Charlie Marshall wins a 7-4 classic over Oliver Burgess for his 7th straight Handley Cup, while Eddie Castaldo claims the Parson's Plate — 161 games and 52 180s across a record 47-player field."
   }
 };

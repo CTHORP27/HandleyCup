@@ -1003,7 +1003,7 @@ const PLAYERS = [
   },
   {
     id: "lewis-ruston",
-    name: "Lewis Ruston",
+    name: "Lewis Rushton",
     appearances: 1,
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 16" },
