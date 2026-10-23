@@ -376,7 +376,7 @@ const PLAYERS = [
   },
   {
     id: "catlin-cope",
-    name: "Catlin Cope",
+    name: "Caitlin Cope",
     appearances: 1,
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 24" },
