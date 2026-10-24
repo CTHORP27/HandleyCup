@@ -114,7 +114,6 @@ const PLAYER_REVEAL_DATES = {
   'lewis-ruston': '2027-01-30T12:00:00', // #65 Lewis Rushton
   'alex-mccowen': '2027-01-30T12:00:00', // #66 Alex McCowen
   'sam-taylor': '2027-01-30T12:00:00', // #67 Sam Taylor
-  'tom-khan': '2027-01-30T12:00:00', // #68 Tom Khan
   'luke-hider': '2027-01-30T12:00:00', // #69 Luke Hider
   'luke-gribbin': '2027-01-30T12:00:00', // #70 Luke Gribbin
   'joe-harrington': '2027-01-30T12:00:00', // #71 Joe Harrington
