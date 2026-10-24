@@ -1952,12 +1952,26 @@ table.cmp-table td {
   .arc-stat-unit { font-size: 11px; }
 }
 
-/* ---------- Player page: All-Time Record strip (5 blocks) ---------- */
-.stat-strip.five-col { grid-template-columns: repeat(5, 1fr); margin-top: 0; max-width: none; }
-.stat-strip.five-col .stat-block { padding: 20px 14px; text-align: center; }
-.stat-strip.five-col .stat-label, .stat-strip.five-col .stat-value, .stat-strip.five-col .stat-meta { overflow-wrap: normal; word-break: normal; }
+/* ---------- Player page: All-Time Record strip (6 blocks) ---------- */
+/* Desktop: 6 across. Tablet: 3 x 2. Phone: Power Ranking and Played full width, then Wins | Leg Difference, then Legs For | Legs Against */
+.stat-strip.atr-grid { grid-template-columns: repeat(6, 1fr); margin-top: 0; max-width: none; }
+.stat-strip.atr-grid .stat-block { padding: 20px 14px; text-align: center; }
+.stat-strip.atr-grid .stat-label, .stat-strip.atr-grid .stat-value, .stat-strip.atr-grid .stat-meta { overflow-wrap: normal; word-break: normal; }
+@media (max-width: 1000px) {
+  .stat-strip.atr-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 760px) {
-  .stat-strip.five-col { grid-template-columns: repeat(2, 1fr); }
-  .stat-strip.five-col .stat-block:last-child { grid-column: 1 / -1; }
-  .stat-strip.five-col .stat-value { font-size: 28px; }
+  .stat-strip.atr-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip.atr-grid .stat-block:nth-child(1),
+  .stat-strip.atr-grid .stat-block:nth-child(2) { grid-column: 1 / -1; }
+  .stat-strip.atr-grid .stat-value { font-size: 28px; }
+}
+
+/* Safety net: if an older player.html (inline 5-column style) is still being served, keep it readable on phones */
+@media (max-width: 760px) {
+  #atrBox .stat-strip:not(.atr-grid) { grid-template-columns: repeat(2, 1fr) !important; }
+  #atrBox .stat-strip:not(.atr-grid) .stat-block:last-child { grid-column: 1 / -1; }
+  #atrBox .stat-strip:not(.atr-grid) .stat-block { padding: 18px 14px; text-align: center; }
+  #atrBox .stat-strip:not(.atr-grid) .stat-label, #atrBox .stat-strip:not(.atr-grid) .stat-value, #atrBox .stat-strip:not(.atr-grid) .stat-meta { overflow-wrap: normal; word-break: normal; }
+  #atrBox .stat-strip:not(.atr-grid) .stat-value { font-size: 28px; }
 }

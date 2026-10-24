@@ -378,7 +378,7 @@
       const legDiff = legsFor - legsAgainst;
 
       box.innerHTML = `
-        <div class="stat-strip five-col">
+        <div class="stat-strip atr-grid">
           <div class="stat-block">
             <div class="stat-label">Power Ranking</div>
             <div class="stat-value accent">${pr ? '#' + pr.rank : '—'}</div>
@@ -390,19 +390,21 @@
             <div class="stat-meta">Group + Knockouts</div>
           </div>
           <div class="stat-block">
-            <div class="stat-label">Won</div>
+            <div class="stat-label">Wins</div>
             <div class="stat-value">${wins}</div>
             <div class="stat-meta">${winPct}% win rate</div>
           </div>
           <div class="stat-block">
-            <div class="stat-label">Leg Diff</div>
+            <div class="stat-label">Leg Difference</div>
             <div class="stat-value">${legDiff > 0 ? '+' : ''}${legDiff}</div>
-            <div class="stat-meta">${legsFor} legs for</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-label">Legs For</div>
+            <div class="stat-value">${legsFor}</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Legs Against</div>
             <div class="stat-value">${legsAgainst}</div>
-            <div class="stat-meta">&nbsp;</div>
           </div>
         </div>
         <div style="text-align:center; margin-top:12px;">
