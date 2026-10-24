@@ -71,7 +71,7 @@ const POWER_RANKINGS = [
   { rank: 51, id: "blake-longden", name: "Blake Longden", nickname: "The SuperStyler", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 52, id: "josh-longden", name: "Josh Longden", nickname: "The Juggernaut", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Last 16" } },
   { rank: 53, id: "finley-nottingham", name: "Finley Nottingham", nickname: "Chippy", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },
-  { rank: 54, id: "catlin-cope", name: "Catlin Cope", nickname: "Can't Cope", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 24" } },
+  { rank: 54, id: "catlin-cope", name: "Caitlin Cope", nickname: "Can't Cope", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 24" } },
   { rank: 55, id: "callum-woodcock", name: "Callum Woodcock", nickname: "Timberdick", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Quarter-Final" } },
   { rank: 56, id: "thomas-palmer", name: "Thomas Palmer", nickname: "Palmer", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Parson's Plate", detail: "Last 16" } },
   { rank: 57, id: "jono-downing", name: "Jono Downing", nickname: "The Havoc", appearances: 1, score: 15, cupTitles: 0, cupRunnerUps: 0, plateTitles: 0, bestRun: { label: "Handley Cup", detail: "Last 16" } },

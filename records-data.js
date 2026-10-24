@@ -84,7 +84,7 @@ const RECORDS = [
   { category: "Firsts & Onlys", text: "All 8 of Curtis Thorpe's knockout losses have come against a different opponent each time", playerName: "Curtis Thorpe", playerId: "curtis-thorpe" },
   { category: "Other Notable Facts", text: "Dale Dennett and Morgan Shillito are the only players to be whitewashed in a Final", playerName: "", playerId: "" },
   { category: "Other Notable Facts", text: "Todd Haynes' 2023/24 Plate win ended the longest trophy drought in Handley Cup history — 6 years", playerName: "Todd Haynes", playerId: "todd-haynes" },
-  { category: "Other Notable Facts", text: "Kelham Elliot and Catlin Cope played the only game in Handley Cup history to last over an hour", playerName: "", playerId: "" },
+  { category: "Other Notable Facts", text: "Kelham Elliot and Caitlin Cope played the only game in Handley Cup history to last over an hour", playerName: "", playerId: "" },
   { category: "Career Records", text: "1,537 legs have been played across every group-stage match in Handley Cup history (427 matches)", playerName: "", playerId: "" },
   { category: "Other Notable Facts", text: "More than half of all group-stage matches (221 of 427, 51.8%) have ended in a clean 3-0 whitewash", playerName: "", playerId: "" },
   { category: "Career Records", text: "Bradley Truelove has the best group-stage win rate of anyone not named Marshall — 93.3% (14 of 15)", playerName: "Bradley Truelove", playerId: "bradley-truelove" },

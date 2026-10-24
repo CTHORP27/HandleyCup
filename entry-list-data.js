@@ -237,7 +237,7 @@ const ENTRY_LIST = {
         { name: "Hedley-Paul Keegan", id: "hedley-paul-keegan", appearanceNumber: 1 },
         { name: "Jack Whiteley", id: "jack-whiteley", appearanceNumber: 1 },
         { name: "Olly Doherty", id: "olly-doherty", appearanceNumber: 1 },
-        { name: "Catlin Cope", id: "catlin-cope", appearanceNumber: 1 },
+        { name: "Caitlin Cope", id: "catlin-cope", appearanceNumber: 1 },
         { name: "Alex Howes", id: "alex-howes", appearanceNumber: 1 },
         { name: "Thomas Palmer", id: "thomas-palmer", appearanceNumber: 1 },
         { name: "Finley Nottingham", id: "finley-nottingham", appearanceNumber: 1 },

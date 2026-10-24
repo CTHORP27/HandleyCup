@@ -100,7 +100,7 @@ const PLAYER_REVEAL_DATES = {
   'blake-longden': '2027-01-30T12:00:00', // #51 Blake Longden
   'josh-longden': '2027-01-30T12:00:00', // #52 Josh Longden
   'finley-nottingham': '2027-01-30T12:00:00', // #53 Finley Nottingham
-  'catlin-cope': '2027-01-30T12:00:00', // #54 Catlin Cope
+  'catlin-cope': '2027-01-30T12:00:00', // #54 Caitlin Cope
   'callum-woodcock': '2027-01-30T12:00:00', // #55 Callum Woodcock
   'thomas-palmer': '2027-01-30T12:00:00', // #56 Thomas Palmer
   'jono-downing': '2027-01-30T12:00:00', // #57 Jono Downing

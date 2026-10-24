@@ -381,7 +381,7 @@ const PLAYERS = [
     nationality: "England",
     bestRun: { label: "Parson's Plate", detail: "Last 24" },
     nickname: "Can't Cope",
-    writeup: `I can't cope with the fact you lost to Kel and it took an hour, and even worse Dan put you at the bottom of the power rankings, but you did prove him wrong! Catlin and Kel are busy practising together I'm sure`,
+    writeup: `I can't cope with the fact you lost to Kel and it took an hour, and even worse Dan put you at the bottom of the power rankings, but you did prove him wrong! Caitlin and Kel are busy practising together I'm sure`,
     highestAverage: { value: 43.18, link: "https://recap.dartconnect.com/matches/6974dada0efa95bbe4953743" },
     oneEighties: null,
     quickestLeg: null,
@@ -599,7 +599,7 @@ const PLAYERS = [
     oneEighties: 8,
     quickestLeg: { darts: 13, link: null },
     highestCheckout: { value: 130, link: null },
-    facts: ["Longest Wait between Appearences (4 events)"],
+    facts: ["Joint-longest wait between appearances — missed 3 events in a row, level with Dan Harrison and Dom Tofts"],
     placeholder: false,
     timeline: [
       { year: "20/21", competition: "Parson's Plate", result: "Quarter-Final", opponentId: "oli-gubbins", opponentName: "Oli Gubbins", score: "2-3", scoreReconstructed: true, average: null, link: null },

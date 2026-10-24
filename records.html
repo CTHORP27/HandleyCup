@@ -105,9 +105,11 @@
   <script src="common.js"></script>
   <script src="records-data.js"></script>
   <script>
+    (function () {
     const section = document.getElementById('recordsSection');
+    try {
 
-    if (!FACTS_READY) {
+    if (typeof FACTS_READY !== 'undefined' && !FACTS_READY) {
       section.innerHTML = `<p class="fact-card pending" style="max-width:600px;">Records and trivia are being finalised — check back soon.</p>`;
     } else {
       const categories = ['Career Records', 'Firsts & Onlys', 'Not Charlie Marshall', 'Other Notable Facts'];
@@ -130,6 +132,10 @@
           </div>`;
       }).join('');
     }
+    } catch (err) {
+      section.innerHTML = '<p class="fact-card pending" style="max-width:600px;">Records couldn\'t load — please refresh the page (or clear the site\'s cached data) and try again.</p>';
+    }
+  })();
   </script>
 
 </body>

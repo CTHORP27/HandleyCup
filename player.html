@@ -380,6 +380,7 @@
       section.style.display = '';
       const winPct = played ? ((wins / played) * 100).toFixed(1) : '0.0';
       const legDiff = legsFor - legsAgainst;
+      const yearsAttended = [...new Set((player.timeline || []).map(t => t.year))].sort().join(', ');
 
       box.innerHTML = `
         <div class="stat-strip atr-grid">
@@ -389,9 +390,14 @@
             <div class="stat-meta">${pr ? pr.score + ' pts' : ''}</div>
           </div>
           <div class="stat-block">
-            <div class="stat-label">Played</div>
+            <div class="stat-label">Games Played</div>
             <div class="stat-value">${played}</div>
             <div class="stat-meta">Group + Knockouts</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-label">Years Attended</div>
+            <div class="stat-value">${player.appearances}</div>
+            <div class="stat-meta">${yearsAttended}</div>
           </div>
           <div class="stat-block">
             <div class="stat-label">Wins</div>

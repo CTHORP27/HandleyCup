@@ -189,6 +189,16 @@ function crownRain() {
   });
 })();
 
+// 3b. Type "HALLOFFAME" anywhere on the site -> Hall of Fame secret page
+(function hofTrigger() {
+  let buf = '';
+  document.addEventListener('keydown', (e) => {
+    if (e.key.length !== 1) return;
+    buf = (buf + e.key).slice(-10).toLowerCase();
+    if (buf === 'halloffame') window.location.href = 'hall-of-fame.html';
+  });
+})();
+
 // 4. Click any champion's crown → little burst right where you clicked
 document.addEventListener('click', (e) => {
   const crown = e.target.closest('.avatar-crown');
