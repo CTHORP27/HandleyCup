@@ -1951,3 +1951,13 @@ table.cmp-table td {
   .arc-stat-value { font-size: 28px; }
   .arc-stat-unit { font-size: 11px; }
 }
+
+/* ---------- Player page: All-Time Record strip (5 blocks) ---------- */
+.stat-strip.five-col { grid-template-columns: repeat(5, 1fr); margin-top: 0; max-width: none; }
+.stat-strip.five-col .stat-block { padding: 20px 14px; text-align: center; }
+.stat-strip.five-col .stat-label, .stat-strip.five-col .stat-value, .stat-strip.five-col .stat-meta { overflow-wrap: normal; word-break: normal; }
+@media (max-width: 760px) {
+  .stat-strip.five-col { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip.five-col .stat-block:last-child { grid-column: 1 / -1; }
+  .stat-strip.five-col .stat-value { font-size: 28px; }
+}
