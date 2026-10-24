@@ -243,7 +243,11 @@
           <td class="score">${t.score ? t.score : '—'}</td>
         </tr>`).join('');
 
-      const avgValueHtml = player.highestAverage ? player.highestAverage.value.toFixed(2) : '—';
+      const avgValueHtml = player.highestAverage
+        ? (player.highestAverage.link
+            ? `<a class="avg-link" href="${player.highestAverage.link}" target="_blank" rel="noopener" title="Open the DartConnect match recap">${player.highestAverage.value.toFixed(2)}<span class="avg-link-arrow"> ↗</span></a>`
+            : player.highestAverage.value.toFixed(2))
+        : '—';
       const avgLinkHtml = (player.highestAverage && player.highestAverage.link)
         ? `<a href="${player.highestAverage.link}" target="_blank" rel="noopener">match recap ↗</a>`
         : 'Not tracked before 24/25';

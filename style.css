@@ -1975,3 +1975,7 @@ table.cmp-table td {
   #atrBox .stat-strip:not(.atr-grid) .stat-label, #atrBox .stat-strip:not(.atr-grid) .stat-value, #atrBox .stat-strip:not(.atr-grid) .stat-meta { overflow-wrap: normal; word-break: normal; }
   #atrBox .stat-strip:not(.atr-grid) .stat-value { font-size: 28px; }
 }
+
+/* Highest Average: the number itself links to the DartConnect recap (the small "match recap" line is hidden on phones) */
+.stat-value a.avg-link { color: inherit; text-decoration: underline dotted; text-underline-offset: 5px; }
+.stat-value a.avg-link .avg-link-arrow { font-size: 0.55em; color: var(--pink); vertical-align: super; }
