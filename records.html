@@ -112,8 +112,8 @@
     if (typeof FACTS_READY !== 'undefined' && !FACTS_READY) {
       section.innerHTML = `<p class="fact-card pending" style="max-width:600px;">Records and trivia are being finalised — check back soon.</p>`;
     } else {
-      const categories = ['Career Records', 'Firsts & Onlys', 'Not Charlie Marshall', 'Other Notable Facts'];
-      const icons = { 'Career Records': '📈', 'Firsts & Onlys': '🌍', 'Not Charlie Marshall': '🚫', 'Other Notable Facts': '📌' };
+      const categories = ['Career Records', 'Firsts & Onlys', 'Not Charlie Marshall', 'Last-Leg Deciders', 'Other Notable Facts'];
+      const icons = { 'Career Records': '📈', 'Firsts & Onlys': '🌍', 'Not Charlie Marshall': '🚫', 'Last-Leg Deciders': '🎯', 'Other Notable Facts': '📌' };
 
       section.innerHTML = categories.map(cat => {
         const items = RECORDS.filter(r => r.category === cat);
