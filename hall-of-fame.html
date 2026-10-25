@@ -68,12 +68,12 @@
   <script>
     const INDUCTIONS = [
       { season: '2024/2025', entries: [
-        { vote: 'Players Vote', name: 'Charlie Marshall', id: 'charlie-marshall' },
-        { vote: 'Players Vote', name: 'Deck Ingber', id: 'deck-ingber' }
+        { vote: 'Players Vote', name: 'Charlie Marshall', id: 'charlie-marshall', writeup: ["There's a case to say Charlie Marshall is Hallam Darts' greatest ever player and Captain!", "Eight Handley Cups under his belt, and he went an entire season without dropping a singles game in the league (18/19). Charlie is Hallam Darts making an appearance every day at the Handley Cup. You can tell when Charlie has entered the room even if you haven't seen him. Not a church mouse by any stretch, but we wouldn't have him any other way. Beeeeepty Beeeep Beeeep, time for another Fire update.", "Charlie really pushed Hallam on during his time as Captain, and as an A team player he mixed it with the best in the UDUK. Now he's doing amazing things in the world of darts on the Challenge Tour and the exhibition circuit."] },
+        { vote: 'Players Vote', name: 'Deck Ingber', id: 'deck-ingber', writeup: ["“The Greatest B Team Captain in UDUK History” — it's Slingber himself. He never missed a game from the day he turned up in a moon boot after failing the football trials. Ingber quickly became a key member of the society before becoming B team captain and leading the first ever B team to defeat an A team. He has attended 7 of the 8 Handley Cups and was the de facto president during the COVID-hit season of 21/22, helping the golden generation during his Alumni year. The HUBS door hinges have felt the Dingber strop once or twice. A Varsity whitewash winner, a 129 hitter and a UDUK quarter-finalist (singles and pairs), it's a smashing CV for the Donny native."] }
       ]},
       { season: '2025/2026', entries: [
-        { vote: 'Committee Vote', name: 'Dale Dennett', id: 'dale-dennett' },
-        { vote: 'Players Vote', name: 'Curtis Thorpe', id: 'curtis-thorpe' }
+        { vote: 'Committee Vote', name: 'Dale Dennett', id: 'dale-dennett', writeup: ["The Obermann of Hallam Darts. No man loves a spreadsheet more than Dennett, and a large part of Hallam's and the Handley Cup's history being captured is due to the work Dale put in behind the scenes. An A team captain and Nationals winner, Double D is a force on and off the oche.", "From leading the chants and owning an awful football shirt collection in his youth, Dale has now traded the PSG 11/12 kit for a quarter zip, and swapped the chants for a chat about mortgage rates.", "From blasting onto the scene as an A team regular, to helping the scholars capture their title locally, to taking part in 7 of the 8 Handley Cups: Dale, you are truly deserving of this spot."] },
+        { vote: 'Players Vote', name: 'Curtis Thorpe', id: 'curtis-thorpe', writeup: ["Mr “I am Hallam Darts!” I don't think anyone loves Hallam more than Thorpe, as turning up each week to throw meant people had to actually socialise with him. He became President and an A team regular in his final season as a student, and captained Hallam to their first ever UDUK National Title. Thorpe has kept the Handley Cup going and helped revive the society with Ingber in the 22/23 season. Always keen to help and offer darting advice (not that anyone cares or listens), Curtis is so proud to see what Hallam has evolved into and keeps an ear out for whoever is leading the ship, to offer a hand."] }
       ]}
     ];
 
@@ -85,7 +85,19 @@
           const nm = player
             ? `<a href="player.html?id=${encodeURIComponent(player.id)}">${e.name}</a> ${flagHtml(player.nationality)}`
             : e.name;
-          return `<div class="fact-card" style="margin:0 0 12px;"><div style="font-size:22px;"><strong>${nm}</strong></div><div style="font-style:normal;">${e.vote}</div></div>`;
+          const champ = player && player.timeline && player.timeline.some(t => t.result === 'Winner' && (t.competition === 'Handley Cup' || t.competition === "Parson's Plate"));
+          const photo = player
+            ? `<div class="avatar-frame"><div class="avatar" style="width:84px; height:84px;" aria-hidden="true">${avatarHtml(player)}</div>${champ ? '<div class="avatar-crown avatar-crown-small" title="Champion">👑</div>' : ''}</div>`
+            : '';
+          return `<div class="fact-card" style="margin:0 0 12px;">
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:12px;">
+              ${photo}
+              <div>
+                <div style="font-size:22px;"><strong>${nm}</strong></div>
+                <div style="font-style:normal; opacity:.75;">${e.vote}</div>
+              </div>
+            </div>
+            ${(e.writeup||[]).map(t => `<p style="font-style:normal; margin:0 0 10px;">${t}</p>`).join('')}</div>`;
         }).join('')}
       </div>`).join('');
   </script>
