@@ -88,7 +88,6 @@ const PLAYER_REVEAL_DATES = {
   'nathan-stewart': '2027-01-30T12:00:00', // #39 Nathan Stewart
   'harvey-thompson': '2027-01-30T12:00:00', // #40 Harvey Thompson
   'calum-brown': '2027-01-30T12:00:00', // #41 Calum Brown
-  'tom-russell': '2027-01-30T12:00:00', // #42 Tom Russell
   'tom-hodder': '2027-01-30T12:00:00', // #43 Tom Hodder
   'luke-mccormack': '2027-01-30T12:00:00', // #44 Luke McCormack
   'dan-burton': '2027-01-30T12:00:00', // #45 Dan Burton
