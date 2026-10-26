@@ -103,7 +103,6 @@ const PLAYER_REVEAL_DATES = {
   'callum-woodcock': '2027-01-30T12:00:00', // #55 Callum Woodcock
   'thomas-palmer': '2027-01-30T12:00:00', // #56 Thomas Palmer
   'jono-downing': '2027-01-30T12:00:00', // #57 Jono Downing
-  'matt-davies': '2027-01-30T12:00:00', // #58 Matt Davies
   'olly-doherty': '2027-01-30T12:00:00', // #59 Olly Doherty
   'will-burgess': '2027-01-30T12:00:00', // #60 Will Burgess
   'alex-howes': '2027-01-30T12:00:00', // #61 Alex Howes
