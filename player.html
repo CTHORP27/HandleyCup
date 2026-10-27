@@ -330,6 +330,11 @@
           </div>
         </section>
 
+        <section class="page-section" id="matchHistorySection" style="display:none;">
+          <div class="section-heading collapsible" data-collapse-target="matchHistoryBox">Full Match History<span class="collapse-arrow">▾</span></div>
+          <div class="timeline-wrap" id="matchHistoryBox"></div>
+        </section>
+
         <footer class="site-footer">
           <a href="index.html">← Home Page</a>
           ${igLinkHtml}
@@ -342,6 +347,53 @@
       renderAbout(player);
       renderCareerArc(player);
       renderAllTimeRecord(player);
+      renderMatchHistory(player);
+    }
+
+    // Every recorded match for this player — group stage and knockouts — oldest season first
+    function renderMatchHistory(player) {
+      if (typeof EVENTS === 'undefined') return;
+      const box = document.getElementById('matchHistoryBox');
+      const section = document.getElementById('matchHistorySection');
+      if (!box || !section) return;
+      const rows = [];
+      Object.keys(EVENTS).sort().forEach(year => {
+        const e = EVENTS[year];
+        const mine = [];
+        Object.keys(e.groupFixtures || {}).forEach(group => {
+          (e.groupFixtures[group] || []).forEach(m => {
+            if (m.score1 == null || m.score2 == null) return;
+            if (m.player1Id === player.id) mine.push({ stage: group, oppId: m.player2Id, oppName: m.player2, lf: m.score1, la: m.score2, rc: m.scoreReconstructed });
+            else if (m.player2Id === player.id) mine.push({ stage: group, oppId: m.player1Id, oppName: m.player1, lf: m.score2, la: m.score1, rc: m.scoreReconstructed });
+          });
+        });
+        [['Handley Cup', e.cupBracket], ["Parson's Plate", e.plateBracket]].forEach(([comp, bracket]) => {
+          Object.keys(bracket || {}).forEach(round => {
+            (bracket[round] || []).forEach(m => {
+              if (m.winnerLegs == null || m.loserLegs == null) return;
+              const label = (comp === 'Handley Cup' ? 'Cup' : 'Plate') + ' — ' + round;
+              if (m.winnerId === player.id) mine.push({ stage: label, oppId: m.loserId, oppName: m.loser, lf: m.winnerLegs, la: m.loserLegs, rc: m.scoreReconstructed });
+              else if (m.loserId === player.id) mine.push({ stage: label, oppId: m.winnerId, oppName: m.winner, lf: m.loserLegs, la: m.winnerLegs, rc: m.scoreReconstructed });
+            });
+          });
+        });
+        mine.forEach((m, i) => rows.push({ year, first: i === 0, ...m }));
+      });
+      if (!rows.length) return;
+      section.style.display = '';
+      const body = rows.map(r => {
+        const won = r.lf > r.la;
+        return `<tr class="${r.first ? 'mh-first' : ''}">
+          <td class="year">${r.first ? r.year : ''}</td>
+          <td>${r.stage}</td>
+          <td class="opponent">${nameHtml(r.oppId, r.oppName)}</td>
+          <td class="score">${r.lf}-${r.la}</td>
+          <td><span class="result-pill ${won ? 'result-win' : 'result-other'}">${won ? 'Won' : 'Lost'}</span></td>
+        </tr>`;
+      }).join('');
+      box.innerHTML = `<table class="timeline"><caption>Every recorded match, oldest season first.</caption>
+        <thead><tr><th>Year</th><th>Stage</th><th>Opponent</th><th>Score</th><th>Result</th></tr></thead>
+        <tbody>${body}</tbody></table>`;
     }
 
     function renderAllTimeRecord(player) {
