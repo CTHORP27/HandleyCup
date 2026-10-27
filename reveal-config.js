@@ -27,7 +27,6 @@
 
 const REVEAL_DATES = {
   'sheet.html': '2027-01-30T12:00:00',
-  'events.html': '2027-01-30T12:00:00',
   'groups.html': '2027-01-30T12:00:00',
   'roll-of-honour.html': '2027-01-30T12:00:00',
   'records.html': '2027-01-30T12:00:00',
