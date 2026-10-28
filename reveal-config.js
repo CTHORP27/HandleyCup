@@ -81,7 +81,6 @@ const PLAYER_REVEAL_DATES = {
   'kelham-elliot': '2027-01-30T12:00:00', // #33 Kelham Elliot
   'joe-ellett': '2027-01-30T12:00:00', // #34 Joe Ellett
   'will-north': '2027-01-30T12:00:00', // #35 Will North
-  'louis-bell': '2027-01-30T12:00:00', // #36 Louis Bell
   'ben-pellington': '2027-01-30T12:00:00', // #37 Ben Pellington
   'kieran-fitzgibbon': '2027-01-30T12:00:00', // #38 Kieran Fitzgibbon
   'nathan-stewart': '2027-01-30T12:00:00', // #39 Nathan Stewart
