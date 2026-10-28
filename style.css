@@ -1982,3 +1982,11 @@ table.cmp-table td {
 .stat-value a.avg-link { color: inherit; text-decoration: underline dotted; text-underline-offset: 5px; }
 .stat-value a.avg-link .avg-link-arrow { font-size: 0.55em; color: var(--pink); vertical-align: super; }
 table.timeline tr.mh-first td { border-top: 2px solid var(--hairline); }
+
+/* Events page: group stage results */
+.gm-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; padding: 7px 4px; border-top: 1px solid var(--hairline); font-size: 13px; }
+.gm-row .gm-player { color: var(--steel-dim); min-width: 0; overflow-wrap: anywhere; }
+.gm-row .gm-player a { color: inherit; }
+.gm-row .gm-win, .gm-row .gm-win a { color: var(--cream, #FBF4F6); font-weight: 600; }
+.gm-row .gm-right { text-align: right; }
+.gm-row .gm-score { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--pink); white-space: nowrap; }
