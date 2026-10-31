@@ -75,7 +75,6 @@ const PLAYER_REVEAL_DATES = {
   'joe-evans': '2027-01-30T12:00:00', // #27 Joe Evans
   'zach-hodgson': '2027-01-30T12:00:00', // #28 Zach Hodgson
   'jack-clucas': '2027-01-30T12:00:00', // #29 Jack Clucas
-  'laura-bugge': '2027-01-30T12:00:00', // #30 Laura Bugge
   'dereece-ohara': '2027-01-30T12:00:00', // #31 Dereece O'Hara
   'will-ellis': '2027-01-30T12:00:00', // #32 Will Ellis
   'kelham-elliot': '2027-01-30T12:00:00', // #33 Kelham Elliot
