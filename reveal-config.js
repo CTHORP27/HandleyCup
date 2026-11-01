@@ -88,7 +88,6 @@ const PLAYER_REVEAL_DATES = {
   'tom-hodder': '2027-01-30T12:00:00', // #43 Tom Hodder
   'luke-mccormack': '2027-01-30T12:00:00', // #44 Luke McCormack
   'dan-burton': '2027-01-30T12:00:00', // #45 Dan Burton
-  'fillip-brom': '2027-01-30T12:00:00', // #46 Fillip Brom
   'jack-whiteley': '2027-01-30T12:00:00', // #48 Jack Whiteley
   'jamesey-ennis': '2027-01-30T12:00:00', // #49 Jamesey Ennis
   'hedley-paul-keegan': '2027-01-30T12:00:00', // #50 Hedley-Paul Keegan
