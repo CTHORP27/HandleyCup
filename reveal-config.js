@@ -66,7 +66,6 @@ const PLAYER_REVEAL_DATES = {
   'oli-gubbins': '2027-01-30T12:00:00', // #18 Oli Gubbins
   'jessie-sale': '2027-01-30T12:00:00', // #19 Jessie Sale
   'hugo-nilsson': '2027-01-30T12:00:00', // #20 Hugo Nilsson
-  'cam-thorpe': '2027-01-30T12:00:00', // #21 Cam Thorpe
   'oliver-wilson': '2027-01-30T12:00:00', // #22 Oliver Wilson
   'finley-sanderson': '2027-01-30T12:00:00', // #23 Finley Sanderson
   'bart-timmer': '2027-01-30T12:00:00', // #24 Bart Timmer
