@@ -1,4 +1,4 @@
-/* =============================================================================
+/** =============================================================================
    THE HANDLEY CUP — PAGE REVEAL SCHEDULE
 
    To lock a page until a certain date/time, add it below using its exact
