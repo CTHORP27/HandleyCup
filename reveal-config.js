@@ -54,7 +54,6 @@ const PLAYER_REVEAL_DATES = {
   'curtis-thorpe': '2027-01-30T12:00:00', // #6 Curtis Thorpe
   'deck-ingber': '2027-01-30T12:00:00', // #7 Deck Ingber
   'alex-wright': '2027-01-30T12:00:00', // #8 Alex Wright
-  'eddie-castaldo': '2027-01-30T12:00:00', // #9 Eddie Castaldo
   'morgan-shillito': '2027-01-30T12:00:00', // #10 Morgan Shillito
   'dom-tofts': '2027-01-30T12:00:00', // #11 Dom Tofts
   'will-sturla': '2027-01-30T12:00:00', // #12 Will Sturla
