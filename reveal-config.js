@@ -88,7 +88,6 @@ const PLAYER_REVEAL_DATES = {
   'jack-whiteley': '2027-01-30T12:00:00', // #48 Jack Whiteley
   'jamesey-ennis': '2027-01-30T12:00:00', // #49 Jamesey Ennis
   'hedley-paul-keegan': '2027-01-30T12:00:00', // #50 Hedley-Paul Keegan
-  'blake-longden': '2027-01-30T12:00:00', // #51 Blake Longden
   'josh-longden': '2027-01-30T12:00:00', // #52 Josh Longden
   'finley-nottingham': '2027-01-30T12:00:00', // #53 Finley Nottingham
   'catlin-cope': '2027-01-30T12:00:00', // #54 Caitlin Cope
