@@ -91,8 +91,7 @@ const PLAYER_REVEAL_DATES = {
   'thomas-palmer': '2027-01-30T12:00:00', // #56 Thomas Palmer
   'olly-doherty': '2027-01-30T12:00:00', // #59 Olly Doherty
   'will-burgess': '2027-01-30T12:00:00', // #60 Will Burgess
-  'chris-ward': '2027-01-30T12:00:00', // #63 Chris Ward
-  'alex-botha': '2027-01-30T12:00:00', // #64 Alex Botha
+  'chris-ward': '2027-01-30T12:00:00', // #63 Chris ward
   'lewis-ruston': '2027-01-30T12:00:00', // #65 Lewis Rushton
   'alex-mccowen': '2027-01-30T12:00:00', // #66 Alex McCowen
   'sam-taylor': '2027-01-30T12:00:00', // #67 Sam Taylor
