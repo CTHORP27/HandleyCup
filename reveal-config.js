@@ -67,7 +67,6 @@ const PLAYER_REVEAL_DATES = {
   'finley-sanderson': '2027-01-30T12:00:00', // #23 Finley Sanderson
   'bart-timmer': '2027-01-30T12:00:00', // #24 Bart Timmer
   'dan-rushton': '2027-01-30T12:00:00', // #25 Dan Rushton
-  'james-buckby': '2027-01-30T12:00:00', // #26 James Buckby
   'joe-evans': '2027-01-30T12:00:00', // #27 Joe Evans
   'zach-hodgson': '2027-01-30T12:00:00', // #28 Zach Hodgson
   'dereece-ohara': '2027-01-30T12:00:00', // #31 Dereece O'Hara
