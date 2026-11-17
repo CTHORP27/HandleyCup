@@ -75,7 +75,6 @@ const PLAYER_REVEAL_DATES = {
   'will-north': '2027-01-30T12:00:00', // #35 Will North
   'ben-pellington': '2027-01-30T12:00:00', // #37 Ben Pellington
   'kieran-fitzgibbon': '2027-01-30T12:00:00', // #38 Kieran Fitzgibbon
-  'nathan-stewart': '2027-01-30T12:00:00', // #39 Nathan Stewart
   'calum-brown': '2027-01-30T12:00:00', // #41 Calum Brown
   'tom-hodder': '2027-01-30T12:00:00', // #43 Tom Hodder
   'luke-mccormack': '2027-01-30T12:00:00', // #44 Luke McCormack
