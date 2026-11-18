@@ -99,5 +99,4 @@ const PLAYER_REVEAL_DATES = {
   'neiran-donnelley': '2027-01-30T12:00:00', // #74 Neiran Donnelley
   'jack-briggs': '2027-01-30T12:00:00', // #75 Jack Briggs
   'huxley-largan': '2027-01-30T12:00:00', // #76 Huxley Largan
-  'henry-wheeler': '2027-01-30T12:00:00', // #77 Henry Wheeler
 };
