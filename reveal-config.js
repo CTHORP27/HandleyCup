@@ -61,7 +61,6 @@ const PLAYER_REVEAL_DATES = {
   'nathan-hemmingway': '2027-01-30T12:00:00', // #15 Nathan Hemmingway
   'bradley-truelove': '2027-01-30T12:00:00', // #16 Bradley Truelove
   'oli-gubbins': '2027-01-30T12:00:00', // #18 Oli Gubbins
-  'hugo-nilsson': '2027-01-30T12:00:00', // #20 Hugo Nilsson
   'oliver-wilson': '2027-01-30T12:00:00', // #22 Oliver Wilson
   'finley-sanderson': '2027-01-30T12:00:00', // #23 Finley Sanderson
   'dan-rushton': '2027-01-30T12:00:00', // #25 Dan Rushton
