@@ -83,7 +83,6 @@ const PLAYER_REVEAL_DATES = {
   'josh-longden': '2027-01-30T12:00:00', // #52 Josh Longden
   'finley-nottingham': '2027-01-30T12:00:00', // #53 Finley Nottingham
   'catlin-cope': '2027-01-30T12:00:00', // #54 Caitlin Cope
-  'olly-doherty': '2027-01-30T12:00:00', // #59 Olly Doherty
   'will-burgess': '2027-01-30T12:00:00', // #60 Will Burgess
   'chris-ward': '2027-01-30T12:00:00', // #63 Chris ward
   'lewis-ruston': '2027-01-30T12:00:00', // #65 Lewis Rushton
