@@ -89,7 +89,6 @@ const PLAYER_REVEAL_DATES = {
   'sam-taylor': '2027-01-30T12:00:00', // #67 Sam Taylor
   'luke-hider': '2027-01-30T12:00:00', // #69 Luke Hider
   'luke-gribbin': '2027-01-30T12:00:00', // #70 Luke Gribbin
-  'joe-harrington': '2027-01-30T12:00:00', // #71 Joe Harrington
   'callum-read': '2027-01-30T12:00:00', // #73 Callum Read
   'neiran-donnelley': '2027-01-30T12:00:00', // #74 Neiran Donnelley
   'jack-briggs': '2027-01-30T12:00:00', // #75 Jack Briggs
