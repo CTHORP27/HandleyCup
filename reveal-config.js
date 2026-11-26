@@ -51,7 +51,6 @@ const PLAYER_REVEAL_DATES = {
   'todd-haynes': '2027-01-30T12:00:00', // #4 Todd Haynes
   'oliver-burgess': '2027-01-30T12:00:00', // #5 Oliver Burgess
   'curtis-thorpe': '2027-01-30T12:00:00', // #6 Curtis Thorpe
-  'deck-ingber': '2027-01-30T12:00:00', // #7 Deck Ingber
   'alex-wright': '2027-01-30T12:00:00', // #8 Alex Wright
   'dom-tofts': '2027-01-30T12:00:00', // #11 Dom Tofts
   'will-sturla': '2027-01-30T12:00:00', // #12 Will Sturla
